@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppThemee" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="carddemo_suggested_header_text"></style>
+
+    <style name="carddemo_suggested_text">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#D0D0D0</item>
+    </style>
+
+    <style name="carddemo_suggested_text_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="carddemo_suggested_text_bold1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="carddemo_default_container_padding">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="AppThemeNew" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/jaguar</item>
+        <item name="android:actionMenuTextColor">@color/colorTextWhite</item>
+        <item name="actionMenuTextColor">@color/colorTextWhite</item>
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:textColorPrimary">@color/colorTextWhite</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/colorPrimary</item>
+        <item name="android:bottomDark">@color/colorPrimary</item>
+        <item name="android:bottomMedium">@color/colorPrimary</item>
+        <item name="android:centerBright">@color/colorPrimary</item>
+        <item name="android:centerDark">@color/colorPrimary</item>
+        <item name="android:centerMedium">@color/colorPrimary</item>
+        <item name="android:fullBright">@color/colorPrimary</item>
+        <item name="android:fullDark">@color/colorPrimary</item>
+        <item name="android:topBright">@color/colorPrimary</item>
+        <item name="android:topDark">@color/colorPrimary</item>
+    </style>
+
+</resources>

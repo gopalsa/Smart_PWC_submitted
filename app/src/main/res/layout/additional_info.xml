@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Additional Information"
+                android:textColorHint="#000"
+                android:textSize="17dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Start here..."
+                android:inputType="textMultiLine"
+                android:textColorHint="#000"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/accent"
+        android:gravity="center"
+        android:text="NEXT"
+        android:padding="15dp"
+        android:textColor="#fff"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+</RelativeLayout>

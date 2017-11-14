@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+
+android {
+    publishNonDefault true
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 9
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.2.0'
+}
+
+//apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

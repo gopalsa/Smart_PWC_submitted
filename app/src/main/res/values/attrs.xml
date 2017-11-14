@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomFontTextView">
+        <attr name="font" format="string"/>
+        <attr name="category" format="string"/>
+        <attr name="choices" format="string"/>
+        <attr name="tittle" format="string"/>
+    </declare-styleable>
+</resources>

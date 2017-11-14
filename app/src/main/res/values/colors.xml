@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d50000</color>
+    <color name="colorPrimaryDark">#FFF70303</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
+    <color name="accent">#d50000</color>
+    <color name="colortint">#FF1A9185</color>
+    <color name="jaguar">#232237</color>
+    <color name="bpRed">#ff3333</color>
+    <color name="colorTextWhite">#ffffffff</color>
+    <color name="charcoal">#fff</color>
+    <color name="medium_jungle_green">#e2dfdf</color>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Smart_pra.iml" filepath="$PROJECT_DIR$/Smart_pra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-gmail/library-gmail.iml" filepath="$PROJECT_DIR$/library-gmail/library-gmail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-map/library-map.iml" filepath="$PROJECT_DIR$/library-map/library-map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-tableformat/library-tableformat.iml" filepath="$PROJECT_DIR$/library-tableformat/library-tableformat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multisnaprecyclerview/multisnaprecyclerview.iml" filepath="$PROJECT_DIR$/multisnaprecyclerview/multisnaprecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qrmodule/qrmodule.iml" filepath="$PROJECT_DIR$/qrmodule/qrmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rosetta/rosetta.iml" filepath="$PROJECT_DIR$/rosetta/rosetta.iml" />
+    </modules>
+  </component>
+</project>

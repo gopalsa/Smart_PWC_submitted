@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_switcher_dialog_title">மொழி தேர்வு</string>
+    <string name="language_switcher_positive_button">சரி</string>
+    <string name="language_switcher_negative_button">ரத்து</string>
+    <string name="app_name">தேங்காய்</string>
+</resources>

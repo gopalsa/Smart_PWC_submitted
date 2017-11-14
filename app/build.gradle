@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "info.androidhive.recyclerview"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.0'
+   // compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.+'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile project(':library-map')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile project(':multisnaprecyclerview')
+    compile('com.github.bkhezry:ExtraMapUtils:v1.2.0') {
+        exclude group: 'com.android.support'
+    }
+    compile 'com.github.smart-fun:XmlToJson:1.1.1'
+    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
+    compile project(path: ':library-gmail')
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    compile project(':library')
+    compile project(':rosetta')
+    compile 'com.github.jrvansuita:PickImage:+'
+    compile 'com.facebook.android:facebook-android-sdk:4.24.0'
+    compile project(':qrmodule')
+    compile project(':library-tableformat')
+}

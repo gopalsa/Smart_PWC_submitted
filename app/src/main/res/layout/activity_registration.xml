@@ -1,0 +1,1642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageview"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile" />
+
+            <info.androidhive.recyclerview.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="VO image"
+                android:textColor="@color/jaguar"
+                app:font="maven" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/aadharimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.75"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_center_focus_strong_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25">
+
+                    <info.androidhive.recyclerview.CustomFontEditText
+                        android:id="@+id/aadharnumer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="Aadhar number"
+                        android:inputType="phone"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="@dimen/textsize"
+                        app:font="maven" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.75"
+                    android:padding="@dimen/paddingimg"
+                    android:src="@drawable/ic_bubble_chart_black_24dp"
+                    android:tint="@color/colortint" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25">
+
+                    <info.androidhive.recyclerview.CustomFontEditText
+                        android:id="@+id/projectname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="Project Name*"
+                        android:inputType="textCapWords"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="@dimen/textsize"
+                        app:font="maven" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.32"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_my_location_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/geotag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Geo tag"
+                            android:inputType="textMultiLine"
+                            android:maxLines="5"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <ImageView
+                        android:id="@+id/refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.35"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_refresh_black_24dp"
+                        android:tint="@color/accent" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.75"
+                    android:padding="@dimen/paddingimg"
+                    android:src="@drawable/ic_assignment_ind_black_24dp"
+                    android:tint="@color/colortint" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25">
+
+                    <info.androidhive.recyclerview.CustomFontEditText
+                        android:id="@+id/voname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="VO name*"
+                        android:inputType="textCapWords"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="@dimen/textsize"
+                        app:font="maven" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_edit_location_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/panchayat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Panchayat"
+                            android:inputType="textMultiLine"
+                            android:maxLines="5"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_edit_location_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Address"
+                            android:inputType="textMultiLine"
+                            android:maxLines="5"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_box_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/vopresident"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="VO president/VRP/SHG Accountant"
+                            android:inputType="textMultiLine"
+                            android:maxLines="5"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_phone_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/farmercontact2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Mobile number*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/whatsapp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/farmercontact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Whatsapp Mobile number"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagehouseholds"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Households*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_aspect_ratio_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagearea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Area(ha)*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_aspect_ratio_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/forestarea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Forest Area(ha)*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_aspect_ratio_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/cultivatedarea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Cultivated Area(ha)*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_aspect_ratio_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/otherarea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Other Area(ha)*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/totalpopulation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Total Population*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagepopulationmale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Population male*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagepopulationfemale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Population female*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagepopulationothers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Population others*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagepopulationchildmale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Population Children male*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagepopulationchildfemale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Population Children female*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_apps_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/villagepopulationchildothers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Village Population Children Others*"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/noofshg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="No of SHG"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/totalvomembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Total VO Members"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/totalfpomembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Total FPO Members"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/totalstmembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Total ST Members"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/totalscmembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Total SC Members"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/totalobcmembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Total OBC Members"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/totalgeneralmembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Total General Members"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_blur_circular_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/irrication"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="Irrigation sustainability*"
+                            android:inputType="textCapWords"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:category="@string/selectable"
+                            app:choices="High,Medium,Low"
+                            app:font="maven"
+                            app:tittle="Irrigation sustainability" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_mail_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <com.tasomaniac.widget.EmailAutoCompleteLayout
+                        android:id="@+id/email_auto_complete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:permissionText="@string/permission_text">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autocomplete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Gmail/Email"
+                            android:inputType="textEmailAddress"
+                            android:selectAllOnFocus="true"
+                            android:textSize="15dp" />
+                    </com.tasomaniac.widget.EmailAutoCompleteLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_account_balance_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/vobankaccountnumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="VO Bank Account number"
+                            android:inputType="phone"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.75"
+                        android:padding="@dimen/paddingimg"
+                        android:src="@drawable/ic_all_out_black_24dp"
+                        android:tint="@color/colortint" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25">
+
+                        <info.androidhive.recyclerview.CustomFontEditText
+                            android:id="@+id/vobankifscnumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="VO Bank IFSC number"
+                            android:inputType="textCapWords"
+                            android:textColorHint="#c6c6c6"
+                            android:textSize="@dimen/textsize"
+                            app:font="maven" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/passwordlin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.75"
+                    android:padding="@dimen/paddingimg"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:tint="@color/colortint" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25">
+
+                    <info.androidhive.recyclerview.CustomFontEditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="Password"
+                        android:inputType="textCapWords"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="@dimen/textsize"
+                        app:font="maven" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/confirmpasswordlin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.75"
+                    android:padding="@dimen/paddingimg"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:tint="@color/colortint" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25">
+
+                    <info.androidhive.recyclerview.CustomFontEditText
+                        android:id="@+id/confirmpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="Confirm Password"
+                        android:inputType="textCapWords"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="@dimen/textsize"
+                        app:font="maven" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/otplin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.75"
+                    android:padding="@dimen/paddingimg"
+                    android:src="@drawable/ic_phone_locked_black_24dp"
+                    android:tint="@color/colortint" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25">
+
+                    <info.androidhive.recyclerview.CustomFontEditText
+                        android:id="@+id/otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="OTP"
+                        android:inputType="textCapWords"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="@dimen/textsize"
+                        app:font="maven" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.75"
+                    android:padding="@dimen/paddingimg"
+                    android:src="@drawable/ic_phone_locked_black_24dp"
+                    android:tint="@color/colortint" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25">
+
+                    <info.androidhive.recyclerview.CustomFontEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="OTP"
+                        android:inputType="textCapWords"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="@dimen/textsize"
+                        app:font="maven" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <info.androidhive.recyclerview.CustomFontTextView
+        android:id="@+id/r_submittxt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="SUBMIT"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+</RelativeLayout>
