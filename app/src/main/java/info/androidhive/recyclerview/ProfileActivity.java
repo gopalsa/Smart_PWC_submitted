@@ -78,6 +78,7 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
     public static final String vrpid = "vrpidKey";
     public static final String update = "updateKey";
     String vrpId = "";
+    public static final String tittle = "tittleKey";
 
     private Vrp vrp;
     private ProgressDialog pDialog;
@@ -94,6 +95,61 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
     private MultiSnapRecyclerView mRecyclerViewcrop;
     private ProfileAdapter mRecyclerAdaptercrop;
     private ArrayList<Plot> cropList = new ArrayList<>();
+
+    //animal
+    private MultiSnapRecyclerView mRecyclerViewanimal;
+    private ProfileAdapter mRecyclerAdapteranimal;
+    private ArrayList<Plot> animalList = new ArrayList<>();
+
+    //farm machine
+    private MultiSnapRecyclerView mRecyclerViewfarmmachine;
+    private ProfileAdapter mRecyclerAdapterfarmmachine;
+    private ArrayList<Plot> farmmachineList = new ArrayList<>();
+
+    //labour
+    private MultiSnapRecyclerView mRecyclerViewlabour;
+    private ProfileAdapter mRecyclerAdapterlabour;
+    private ArrayList<Plot> labourList = new ArrayList<>();
+
+    //soilresources
+    private MultiSnapRecyclerView mRecyclerViewsoilresources;
+    private ProfileAdapter mRecyclerAdaptersoilresources;
+    private ArrayList<Plot> soilresourcesList = new ArrayList<>();
+
+    //waterresources
+    private MultiSnapRecyclerView mRecyclerViewwaterresources;
+    private ProfileAdapter mRecyclerAdapterwaterresources;
+    private ArrayList<Plot> waterresourcesList = new ArrayList<>();
+
+    //toilets
+    private MultiSnapRecyclerView mRecyclerViewtoilets;
+    private ProfileAdapter mRecyclerAdaptertoilets;
+    private ArrayList<Plot> toiletsList = new ArrayList<>();
+
+    //electricity
+    private MultiSnapRecyclerView mRecyclerViewelectricity;
+    private ProfileAdapter mRecyclerAdapterelectricity;
+    private ArrayList<Plot> electricityList = new ArrayList<>();
+
+    //financialinstitutions
+    private MultiSnapRecyclerView mRecyclerViewfinancialinstitutions;
+    private ProfileAdapter mRecyclerAdapterfinancialinstitutions;
+    private ArrayList<Plot> financialinstitutionsList = new ArrayList<>();
+
+    //schools
+    private MultiSnapRecyclerView mRecyclerViewschools;
+    private ProfileAdapter mRecyclerAdapterschools;
+    private ArrayList<Plot> schoolsList = new ArrayList<>();
+
+    //hospitals
+    private MultiSnapRecyclerView mRecyclerViewhospitals;
+    private ProfileAdapter mRecyclerAdapterhospitals;
+    private ArrayList<Plot> hospitalsList = new ArrayList<>();
+
+    //shops
+    private MultiSnapRecyclerView mRecyclerViewshops;
+    private ProfileAdapter mRecyclerAdaptershops;
+    private ArrayList<Plot> shopsList = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -163,9 +219,38 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
                 finish();
             }
         });
-
+        ImageView allout = (ImageView) findViewById(R.id.allout);
+        allout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sharedpreferences = getSharedPreferences(mypreference,
+                        Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(tittle, "villgeprofile");
+                editor.commit();
+                Intent io = new Intent(ProfileActivity.this, CustomMarkerClusteringDemoActivity.class);
+                io.putExtra("tittle", "villageprofile");
+                startActivity(io);
+            }
+        });
         bankDetail();
         cropDetail();
+        animalDetail();
+        farmmachineDetail();
+        labourDetail();
+        soilresourcesDetail();
+        waterresourcesDetail();
+        toiletsDetail();
+        ;
+        electricityDetail();
+        ;
+        financialinstitutionsDetail();
+        ;
+        schoolsDetail();
+        ;
+        hospitalsDetail();
+        ;
+        shopsDetail();
         prepareData(true);
     }
 
@@ -252,51 +337,1358 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
         }));
     }
 
+    private void animalDetail() {
+        final ImageView addanimal = (ImageView) findViewById(R.id.addanimal);
+        final CustomFontTextView animaldetail = (CustomFontTextView) findViewById(R.id.animaldetail);
+        addanimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addAnimal(-1, "", "Add animal");
+            }
+        });
+        animaldetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addAnimal(-1, "", "Add animal");
+            }
+        });
+        mRecyclerViewanimal = (MultiSnapRecyclerView) findViewById(R.id.animallist);
+        mRecyclerAdapteranimal = new ProfileAdapter(ProfileActivity.this, animalList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewanimal.setLayoutManager(thirdManager);
+        mRecyclerViewanimal.setAdapter(mRecyclerAdapteranimal);
+        mRecyclerViewanimal.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewanimal, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addAnimal(position, animalList.get(position).getPlotname(), "Update animal");
+            }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+            @Override
+            public void onLongClick(View view, int position) {
 
+            }
+        }));
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_lan, menu);
-        MenuItem item = menu.findItem(R.id.language);
-        item.setVisible(false);
-        return true;
+    private void farmmachineDetail() {
+        final ImageView addfarmmachine = (ImageView) findViewById(R.id.addfarmmachine);
+        final CustomFontTextView farmmachinedetail = (CustomFontTextView) findViewById(R.id.farmmachinedetail);
+        addfarmmachine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addFarmmachine(-1, "", "Add farm machine");
+            }
+        });
+        farmmachinedetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addFarmmachine(-1, "", "Add farm machine");
+            }
+        });
+        mRecyclerViewfarmmachine = (MultiSnapRecyclerView) findViewById(R.id.farmmachinelist);
+        mRecyclerAdapterfarmmachine = new ProfileAdapter(ProfileActivity.this, farmmachineList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewfarmmachine.setLayoutManager(thirdManager);
+        mRecyclerViewfarmmachine.setAdapter(mRecyclerAdapterfarmmachine);
+        mRecyclerViewfarmmachine.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewfarmmachine, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addFarmmachine(position, farmmachineList.get(position).getPlotname(), "Update farm machine");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
-        if (id == android.R.id.home) {
-            finish();
-            return true;
+    private void labourDetail() {
+        final ImageView addlabour = (ImageView) findViewById(R.id.addlabour);
+        final CustomFontTextView labourdetail = (CustomFontTextView) findViewById(R.id.labourdetail);
+        addlabour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addlabour(-1, "", "Add labour");
+            }
+        });
+        labourdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addlabour(-1, "", "Add labour");
+            }
+        });
+        mRecyclerViewlabour = (MultiSnapRecyclerView) findViewById(R.id.labourlist);
+        mRecyclerAdapterlabour = new ProfileAdapter(ProfileActivity.this, labourList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewlabour.setLayoutManager(thirdManager);
+        mRecyclerViewlabour.setAdapter(mRecyclerAdapterlabour);
+        mRecyclerViewlabour.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewlabour, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addlabour(position, labourList.get(position).getPlotname(), "Update labour");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void soilresourcesDetail() {
+        final ImageView addsoilresources = (ImageView) findViewById(R.id.addsoilresources);
+        final CustomFontTextView soilresourcesdetail = (CustomFontTextView) findViewById(R.id.soilresourcesdetail);
+        addsoilresources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addsoilresources(-1, "", "Add soil resources");
+            }
+        });
+        soilresourcesdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addsoilresources(-1, "", "Add soil resources");
+            }
+        });
+        mRecyclerViewsoilresources = (MultiSnapRecyclerView) findViewById(R.id.soilresourceslist);
+        mRecyclerAdaptersoilresources = new ProfileAdapter(ProfileActivity.this, soilresourcesList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewsoilresources.setLayoutManager(thirdManager);
+        mRecyclerViewsoilresources.setAdapter(mRecyclerAdaptersoilresources);
+        mRecyclerViewsoilresources.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewsoilresources, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addsoilresources(position, soilresourcesList.get(position).getPlotname(), "Update soil resources");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void waterresourcesDetail() {
+        final ImageView addwaterresources = (ImageView) findViewById(R.id.addwaterresources);
+        final CustomFontTextView waterresourcesdetail = (CustomFontTextView) findViewById(R.id.waterresourcesdetail);
+        addwaterresources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addwaterresources(-1, "", "Add water resources");
+            }
+        });
+        waterresourcesdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addwaterresources(-1, "", "Add water resources");
+            }
+        });
+        mRecyclerViewwaterresources = (MultiSnapRecyclerView) findViewById(R.id.waterresourceslist);
+        mRecyclerAdapterwaterresources = new ProfileAdapter(ProfileActivity.this, waterresourcesList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewwaterresources.setLayoutManager(thirdManager);
+        mRecyclerViewwaterresources.setAdapter(mRecyclerAdapterwaterresources);
+        mRecyclerViewwaterresources.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewwaterresources, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addwaterresources(position, waterresourcesList.get(position).getPlotname(), "Update water resources");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void toiletsDetail() {
+        final ImageView addtoilets = (ImageView) findViewById(R.id.addtoilets);
+        final CustomFontTextView toiletsdetail = (CustomFontTextView) findViewById(R.id.toiletsdetail);
+        addtoilets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addtoilets(-1, "", "Add toilets");
+            }
+        });
+        toiletsdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addtoilets(-1, "", "Add toilets");
+            }
+        });
+        mRecyclerViewtoilets = (MultiSnapRecyclerView) findViewById(R.id.toiletslist);
+        mRecyclerAdaptertoilets = new ProfileAdapter(ProfileActivity.this, toiletsList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewtoilets.setLayoutManager(thirdManager);
+        mRecyclerViewtoilets.setAdapter(mRecyclerAdaptertoilets);
+        mRecyclerViewtoilets.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewtoilets, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addtoilets(position, toiletsList.get(position).getPlotname(), "Update toilets");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void electricityDetail() {
+        final ImageView addelectricity = (ImageView) findViewById(R.id.addelectricity);
+        final CustomFontTextView electricitydetail = (CustomFontTextView) findViewById(R.id.electricitydetail);
+        addelectricity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addelectricity(-1, "", "Add electricity");
+            }
+        });
+        electricitydetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addelectricity(-1, "", "Add electricity");
+            }
+        });
+        mRecyclerViewelectricity = (MultiSnapRecyclerView) findViewById(R.id.electricitylist);
+        mRecyclerAdapterelectricity = new ProfileAdapter(ProfileActivity.this, electricityList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewelectricity.setLayoutManager(thirdManager);
+        mRecyclerViewelectricity.setAdapter(mRecyclerAdapterelectricity);
+        mRecyclerViewelectricity.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewelectricity, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addelectricity(position, electricityList.get(position).getPlotname(), "Update electricity");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void financialinstitutionsDetail() {
+        final ImageView addfinancialinstitutions = (ImageView) findViewById(R.id.addfinancialinstitutions);
+        final CustomFontTextView financialinstitutionsdetail = (CustomFontTextView) findViewById(R.id.financialinstitutionsdetail);
+        addfinancialinstitutions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addfinancialinstitutions(-1, "", "Add financial institutions");
+            }
+        });
+        financialinstitutionsdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addfinancialinstitutions(-1, "", "Add financial institutions");
+            }
+        });
+        mRecyclerViewfinancialinstitutions = (MultiSnapRecyclerView) findViewById(R.id.financialinstitutionslist);
+        mRecyclerAdapterfinancialinstitutions = new ProfileAdapter(ProfileActivity.this, financialinstitutionsList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewfinancialinstitutions.setLayoutManager(thirdManager);
+        mRecyclerViewfinancialinstitutions.setAdapter(mRecyclerAdapterfinancialinstitutions);
+        mRecyclerViewfinancialinstitutions.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewfinancialinstitutions, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addfinancialinstitutions(position, financialinstitutionsList.get(position).getPlotname(), "Update Financial institutions");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void schoolsDetail() {
+        final ImageView addschools = (ImageView) findViewById(R.id.addschools);
+        final CustomFontTextView schoolsdetail = (CustomFontTextView) findViewById(R.id.schoolsdetail);
+        addschools.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addschools(-1, "", "Add schools");
+            }
+        });
+        schoolsdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addschools(-1, "", "Add schools");
+            }
+        });
+        mRecyclerViewschools = (MultiSnapRecyclerView) findViewById(R.id.schoolslist);
+        mRecyclerAdapterschools = new ProfileAdapter(ProfileActivity.this, schoolsList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewschools.setLayoutManager(thirdManager);
+        mRecyclerViewschools.setAdapter(mRecyclerAdapterschools);
+        mRecyclerViewschools.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewschools, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addschools(position, schoolsList.get(position).getPlotname(), "Update schools");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void hospitalsDetail() {
+        final ImageView addhospitals = (ImageView) findViewById(R.id.addhospitals);
+        final CustomFontTextView hospitalsdetail = (CustomFontTextView) findViewById(R.id.hospitalsdetail);
+        addhospitals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addhospitals(-1, "", "Add hospitals");
+            }
+        });
+        hospitalsdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addhospitals(-1, "", "Add hospitals");
+            }
+        });
+        mRecyclerViewhospitals = (MultiSnapRecyclerView) findViewById(R.id.hospitalslist);
+        mRecyclerAdapterhospitals = new ProfileAdapter(ProfileActivity.this, hospitalsList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewhospitals.setLayoutManager(thirdManager);
+        mRecyclerViewhospitals.setAdapter(mRecyclerAdapterhospitals);
+        mRecyclerViewhospitals.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewhospitals, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addhospitals(position, hospitalsList.get(position).getPlotname(), "Update hospitals");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    private void shopsDetail() {
+        final ImageView addshops = (ImageView) findViewById(R.id.addshops);
+        final CustomFontTextView shopsdetail = (CustomFontTextView) findViewById(R.id.shopsdetail);
+        addshops.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addshops(-1, "", "Add shops");
+            }
+        });
+        shopsdetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addshops(-1, "", "Add shops");
+            }
+        });
+        mRecyclerViewshops = (MultiSnapRecyclerView) findViewById(R.id.shopslist);
+        mRecyclerAdaptershops = new ProfileAdapter(ProfileActivity.this, shopsList);
+        final LinearLayoutManager thirdManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewshops.setLayoutManager(thirdManager);
+        mRecyclerViewshops.setAdapter(mRecyclerAdaptershops);
+        mRecyclerViewshops.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerViewshops, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                addshops(position, shopsList.get(position).getPlotname(), "Update shops");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+    }
+
+    public void addlabour(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "labour", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
         }
-        return super.onOptionsItemSelected(item);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "labour", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "labour", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
     }
 
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        MarkerOptions marker = new MarkerOptions()
-                .position(new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0]), Double.parseDouble(vrp.getGeotag().split(",")[1])))
-                .title(vrp.getVoname())
-                .snippet(vrp.getGeotag().split(",")[0].substring(0, 7) + "," + vrp.getGeotag().split(",")[1].substring(0, 7));
-        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        googleMap.addMarker(marker).showInfoWindow();
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(
-                new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0]), Double.parseDouble(vrp.getGeotag().split(",")[1]))).zoom(12).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+    public void addsoilresources(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "soilresources", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "soilresources", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "soilresources", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
     }
 
+    public void addwaterresources(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "waterresources", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "waterresources", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "waterresources", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
+    public void addtoilets(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "toilets", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "toilets", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "toilets", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
+    public void addelectricity(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "electricity", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "electricity", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "electricity", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
+    public void addfinancialinstitutions(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "financialinstitutions", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "financialinstitutions", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "financialinstitutions", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
+    public void addschools(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "schools", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "schools", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "schools", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
+    public void addhospitals(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "hospitals", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "hospitals", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "hospitals", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
+    public void addshops(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "shops", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "shops", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "shops", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
 
     public void addCrop(final int position, final String conatct, String tittle) {
         imagePath = "";
@@ -394,16 +1786,15 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
                         if (season.getText().toString().trim().length() > 0) {
                             jsonObject.put("image", imagePath);
                         }
-
+                        if (position == -1) {
+                            registerProduct(vrpId, "crop", jsonObject.getString("cropname")
+                                    , jsonObject.getString("cropname"), jsonObject.toString(), false, b, position);
+                        } else {
+                            registerProduct(vrpId, "crop", conatct
+                                    , jsonObject.getString("cropname"), jsonObject.toString(), true, b, position);
+                        }
                     } catch (JSONException e) {
                         Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
-                    }
-                    if (position == -1) {
-                        registerProduct(vrpId, "crop", year.getText().toString()
-                                , year.getText().toString(), jsonObject.toString(), false, b, position);
-                    } else {
-                        registerProduct(vrpId, "crop", conatct
-                                , year.getText().toString(), jsonObject.toString(), true, b, position);
                     }
                 }
                 b.cancel();
@@ -600,6 +1991,226 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
         b.show();
     }
 
+    public void addAnimal(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "animal", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "animal", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "animal", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
+    public void addFarmmachine(final int position, final String conatct, String tittle) {
+        imagePath = "";
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
+        LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.common_popup, null);
+        final ImageView itemclose = (ImageView) dialogView.findViewById(R.id.itemclose);
+        final CustomFontEditText name = (CustomFontEditText) dialogView.findViewById(R.id.name);
+        final CustomFontEditText description = (CustomFontEditText) dialogView.findViewById(R.id.description);
+        final LinearLayout imagelin = (LinearLayout) dialogView.findViewById(R.id.imglin);
+        final CircleImageView image = (CircleImageView) dialogView.findViewById(R.id.image);
+        final CustomFontTextView imagetxt = (CustomFontTextView) dialogView.findViewById(R.id.imagetxt);
+        CustomFontTextView submit = (CustomFontTextView) dialogView.findViewById(R.id.r_submittxt);
+        dialogBuilder.setView(dialogView);
+        final AlertDialog b = dialogBuilder.create();
+        b.setCancelable(false);
+        itemclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.cancel();
+            }
+        });
+        final CustomFontTextView itemtittle = (CustomFontTextView) dialogView.findViewById(R.id.itemtittle);
+        itemtittle.setText(tittle);
+        if (position != -1) {
+            ArrayList<String> data = dbProfile.getData(vrpId, "farmmachine", conatct);
+            try {
+                JSONObject jsonObject = new JSONObject(data.get(3));
+                name.setText(jsonObject.getString("name"));
+                description.setText(jsonObject.getString("description"));
+                Glide.with(ProfileActivity.this).load(jsonObject.getString("image"))
+                        .centerCrop()
+                        .dontAnimate()
+                        .thumbnail(0.5f)
+                        .placeholder(R.drawable.profile)
+                        .into(image);
+                imagePath = jsonObject.getString("image");
+                imagetxt.setText("update image");
+            } catch (JSONException e) {
+                Log.d("xxxxxxxxx", e.toString());
+                Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (name.getText().toString().length() <= 0 || description.getText().toString().length() <= 0) {
+                    Toast.makeText(getApplicationContext(), "Enter all fileds", Toast.LENGTH_SHORT).show();
+                } else {
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("name", name.getText().toString());
+                        jsonObject.put("description", description.getText().toString());
+                        jsonObject.put("image", imagePath);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                    if (position == -1) {
+                        registerProduct(vrpId, "farmmachine", name.getText().toString()
+                                , name.getText().toString(), jsonObject.toString(), false, b, position);
+                    } else {
+                        registerProduct(vrpId, "farmmachine", conatct
+                                , name.getText().toString(), jsonObject.toString(), true, b, position);
+                    }
+                }
+                b.cancel();
+            }
+        });
+        imagetxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PickSetup setup = new PickSetup();
+                PickImageDialog.build(setup).setOnPickResult(new IPickResult() {
+                    @Override
+                    public void onPickResult(PickResult pickResult) {
+                        Glide.with(ProfileActivity.this).load(pickResult.getUri())
+                                .centerCrop()
+                                .dontAnimate()
+                                .thumbnail(0.5f)
+                                .placeholder(R.drawable.profile)
+                                .into(image);
+                        imagePath = pickResult.getUri().toString();
+                        imagetxt.setText(pickResult.getUri().toString());
+                    }
+                })
+                        .show(ProfileActivity.this);
+            }
+        });
+        b.show();
+    }
+
     public void addBank(final int position, final String conatct, String tittle) {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ProfileActivity.this);
         LayoutInflater inflater = ProfileActivity.this.getLayoutInflater();
@@ -689,49 +2300,6 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-//                        if (mname.equals("leadfarmer")) {
-//                            JSONObject jsonObject = new JSONObject(mdata.toString());
-//                            if (!mupdate) {
-//                                Plot plot = new Plot("", jsonObject.getString("name"),
-//                                        "f", jsonObject.getString("contact"), null);
-//                                farmerList.add(plot);
-//                                mRecyclerAdapterFarmer.notifyData(farmerList);
-//                                dbProfile.addData(farmerId, "leadfarmer", contact, mdata);
-//                            } else {
-//                                farmerList.get(mposition).setPlotname(jsonObject.getString("name"));
-//                                farmerList.get(mposition).setPlotarea(jsonObject.getString("contact"));
-//                                dbProfile.updatedata(farmerId, "leadfarmer", moldcontact, contact, mdata);
-//                                mRecyclerAdapterFarmer.notifyData(farmerList);
-//                            }
-//                        } else if (mname.equals("expertsupport")) {
-//                            JSONObject jsonObject = new JSONObject(mdata.toString());
-//                            if (!mupdate) {
-//                                Plot plot = new Plot("", jsonObject.getString("name"),
-//                                        "f", jsonObject.getString("contact"), null);
-//                                expertList.add(plot);
-//                                mRecyclerAdapterExpert.notifyData(expertList);
-//                                dbProfile.addData(farmerId, "expertsupport", contact, mdata);
-//                            } else {
-//                                expertList.get(mposition).setPlotname(jsonObject.getString("name"));
-//                                expertList.get(mposition).setPlotarea(jsonObject.getString("contact"));
-//                                dbProfile.updatedata(farmerId, "expertsupport", moldcontact, contact, mdata);
-//                                mRecyclerAdapterExpert.notifyData(expertList);
-//                            }
-//                        } else if (mname.equals("agroservices")) {
-//                            JSONObject jsonObject = new JSONObject(mdata.toString());
-//                            if (!mupdate) {
-//                                Plot plot = new Plot("", jsonObject.getString("name"),
-//                                        "f", jsonObject.getString("contact"), null);
-//                                agrolist.add(plot);
-//                                mRecyclerAdapteAgro.notifyData(agrolist);
-//                                dbProfile.addData(farmerId, "agroservices", contact, mdata);
-//                            } else {
-//                                agrolist.get(mposition).setPlotname(jsonObject.getString("name"));
-//                                agrolist.get(mposition).setPlotarea(jsonObject.getString("contact"));
-//                                dbProfile.updatedata(farmerId, "agroservices", moldcontact, contact, mdata);
-//                                mRecyclerAdapteAgro.notifyData(agrolist);
-//                            }
-//                        }
                         if (mname.equals("bank")) {
                             JSONObject jsonObject = new JSONObject(mdata.toString());
                             if (!mupdate) {
@@ -758,26 +2326,175 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
                                 cropList.get(mposition).setPlotname(jsonObject.getString("season"));
                                 cropList.get(mposition).setPlotarea(jsonObject.getString("year"));
                                 cropList.get(mposition).setPlotimage(jsonObject.getString("image"));
-                                dbProfile.updatedata(vrpId, "agent", moldcontact, contact, mdata);
+                                dbProfile.updatedata(vrpId, "crop", moldcontact, contact, mdata);
                                 mRecyclerAdaptercrop.notifyData(cropList);
                             }
+                        } else if (mname.equals("animal")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                animalList.add(plot);
+                                mRecyclerAdapteranimal.notifyData(animalList);
+                                dbProfile.addData(vrpId, "animal", contact, mdata);
+                            } else {
+                                animalList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                animalList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                animalList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "animal", moldcontact, contact, mdata);
+                                mRecyclerAdapteranimal.notifyData(animalList);
+                            }
+                        } else if (mname.equals("farmmachine")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                farmmachineList.add(plot);
+                                mRecyclerAdapterfarmmachine.notifyData(farmmachineList);
+                                dbProfile.addData(vrpId, "farmmachine", contact, mdata);
+                            } else {
+                                farmmachineList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                farmmachineList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                farmmachineList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "farmmachine", moldcontact, contact, mdata);
+                                mRecyclerAdapterfarmmachine.notifyData(farmmachineList);
+                            }
+                        } else if (mname.equals("labour")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                labourList.add(plot);
+                                mRecyclerAdapterlabour.notifyData(labourList);
+                                dbProfile.addData(vrpId, "labour", contact, mdata);
+                            } else {
+                                labourList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                labourList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                labourList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "labour", moldcontact, contact, mdata);
+                                mRecyclerAdapterlabour.notifyData(labourList);
+                            }
+                        } else if (mname.equals("soilresources")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                soilresourcesList.add(plot);
+                                mRecyclerAdaptersoilresources.notifyData(soilresourcesList);
+                                dbProfile.addData(vrpId, "soilresources", contact, mdata);
+                            } else {
+                                soilresourcesList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                soilresourcesList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                soilresourcesList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "soilresources", moldcontact, contact, mdata);
+                                mRecyclerAdaptersoilresources.notifyData(soilresourcesList);
+                            }
+                        } else if (mname.equals("waterresources")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                waterresourcesList.add(plot);
+                                mRecyclerAdapterwaterresources.notifyData(waterresourcesList);
+                                dbProfile.addData(vrpId, "waterresources", contact, mdata);
+                            } else {
+                                waterresourcesList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                waterresourcesList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                waterresourcesList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "waterresources", moldcontact, contact, mdata);
+                                mRecyclerAdapterwaterresources.notifyData(waterresourcesList);
+                            }
+                        } else if (mname.equals("toilets")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                toiletsList.add(plot);
+                                mRecyclerAdaptertoilets.notifyData(toiletsList);
+                                dbProfile.addData(vrpId, "toilets", contact, mdata);
+                            } else {
+                                toiletsList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                toiletsList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                toiletsList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "toilets", moldcontact, contact, mdata);
+                                mRecyclerAdaptertoilets.notifyData(toiletsList);
+                            }
+                        } else if (mname.equals("electricity")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                electricityList.add(plot);
+                                mRecyclerAdapterelectricity.notifyData(electricityList);
+                                dbProfile.addData(vrpId, "electricity", contact, mdata);
+                            } else {
+                                electricityList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                electricityList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                electricityList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "electricity", moldcontact, contact, mdata);
+                                mRecyclerAdapterelectricity.notifyData(electricityList);
+                            }
+                        } else if (mname.equals("financialinstitutions")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                financialinstitutionsList.add(plot);
+                                mRecyclerAdapterfinancialinstitutions.notifyData(financialinstitutionsList);
+                                dbProfile.addData(vrpId, "financialinstitutions", contact, mdata);
+                            } else {
+                                financialinstitutionsList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                financialinstitutionsList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                financialinstitutionsList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "financialinstitutions", moldcontact, contact, mdata);
+                                mRecyclerAdapterfinancialinstitutions.notifyData(financialinstitutionsList);
+                            }
+                        } else if (mname.equals("schools")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                schoolsList.add(plot);
+                                mRecyclerAdapterschools.notifyData(schoolsList);
+                                dbProfile.addData(vrpId, "schools", contact, mdata);
+                            } else {
+                                schoolsList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                schoolsList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                schoolsList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "schools", moldcontact, contact, mdata);
+                                mRecyclerAdapterschools.notifyData(schoolsList);
+                            }
+                        } else if (mname.equals("hospitals")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                hospitalsList.add(plot);
+                                mRecyclerAdapterhospitals.notifyData(hospitalsList);
+                                dbProfile.addData(vrpId, "hospitals", contact, mdata);
+                            } else {
+                                hospitalsList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                hospitalsList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                hospitalsList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "hospitals", moldcontact, contact, mdata);
+                                mRecyclerAdapterhospitals.notifyData(hospitalsList);
+                            }
+                        } else if (mname.equals("shops")) {
+                            JSONObject jsonObject = new JSONObject(mdata.toString());
+                            if (!mupdate) {
+                                Plot plot = new Plot("", jsonObject.getString("name"),
+                                        jsonObject.getString("image"), jsonObject.getString("description"), null);
+                                shopsList.add(plot);
+                                mRecyclerAdaptershops.notifyData(shopsList);
+                                dbProfile.addData(vrpId, "shops", contact, mdata);
+                            } else {
+                                shopsList.get(mposition).setPlotname(jsonObject.getString("name"));
+                                shopsList.get(mposition).setPlotarea(jsonObject.getString("description"));
+                                shopsList.get(mposition).setPlotimage(jsonObject.getString("image"));
+                                dbProfile.updatedata(vrpId, "shops", moldcontact, contact, mdata);
+                                mRecyclerAdaptershops.notifyData(shopsList);
+                            }
                         }
-//                        else if (mname.equals("service")) {
-//                            JSONObject jsonObject = new JSONObject(mdata.toString());
-//                            if (!mupdate) {
-//                                Plot plot = new Plot("", jsonObject.getString("name"),
-//                                        jsonObject.getString("image"), jsonObject.getString("contact"), null);
-//                                serviceList.add(plot);
-//                                mRecyclerAdapterService.notifyData(serviceList);
-//                                dbProfile.addData(farmerId, "service", contact, mdata);
-//                            } else {
-//                                serviceList.get(mposition).setPlotname(jsonObject.getString("name"));
-//                                serviceList.get(mposition).setPlotarea(jsonObject.getString("contact"));
-//                                serviceList.get(mposition).setPlotimage(jsonObject.getString("image"));
-//                                dbProfile.updatedata(farmerId, "service", moldcontact, contact, mdata);
-//                                mRecyclerAdapterService.notifyData(serviceList);
-//                            }
-//                        }
                     } else {
                         // Error occurred in registration. Get the error
                         // message
@@ -990,52 +2707,171 @@ public class ProfileActivity extends AppCompatActivity implements OnMapReadyCall
                 } else if (data.get(1).equals("crop")) {
                     try {
                         JSONObject dataObject = new JSONObject(data.get(3).toString());
-                        Plot plot = new Plot("", dataObject.getString("season"), dataObject.getString("image"), dataObject.getString("year"), null);
+                        Plot plot = new Plot("", dataObject.getString("cropname"),
+                                dataObject.getString("image"), dataObject.getString("year"), null);
                         cropList.add(plot);
                     } catch (JSONException e) {
                         Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
                     }
+                } else if (data.get(1).equals("animal")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        animalList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("farmmachine")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        farmmachineList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("labour")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        labourList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("soilresources")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        soilresourcesList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("toilets")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        toiletsList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("waterresources")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        waterresourcesList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("electricity")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        electricityList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("financialinstitutions")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        financialinstitutionsList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("schools")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        schoolsList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("hospitals")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        hospitalsList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (data.get(1).equals("shops")) {
+                    try {
+                        JSONObject dataObject = new JSONObject(data.get(3).toString());
+                        Plot plot = new Plot("", dataObject.getString("name"),
+                                dataObject.getString("image"), dataObject.getString("description"), null);
+                        shopsList.add(plot);
+                    } catch (JSONException e) {
+                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
+                    }
                 }
-// else if (data.get(1).equals("service")) {
-//                    try {
-//                        JSONObject dataObject = new JSONObject(data.get(3).toString());
-//                        Plot plot = new Plot("", dataObject.getString("name"), dataObject.getString("image"), dataObject.getString("contact"), null);
-//                        serviceList.add(plot);
-//                    } catch (JSONException e) {
-//                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
-//                    }
-//                } else if (data.get(1).equals("leadfarmer")) {
-//                    try {
-//                        JSONObject dataObject = new JSONObject(data.get(3).toString());
-//                        Plot plot = new Plot("", dataObject.getString("name"), "noimage", dataObject.getString("contact"), null);
-//                        farmerList.add(plot);
-//                    } catch (JSONException e) {
-//                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
-//                    }
-//                } else if (data.get(1).equals("expertsupport")) {
-//                    try {
-//                        JSONObject dataObject = new JSONObject(data.get(3).toString());
-//                        Plot plot = new Plot("", dataObject.getString("name"), "noimage", dataObject.getString("contact"), null);
-//                        expertList.add(plot);
-//                    } catch (JSONException e) {
-//                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
-//                    }
-//                } else if (data.get(1).equals("agroservices")) {
-//                    try {
-//                        JSONObject dataObject = new JSONObject(data.get(3).toString());
-//                        Plot plot = new Plot("", dataObject.getString("name"), "noimage", dataObject.getString("contact"), null);
-//                        agrolist.add(plot);
-//                    } catch (JSONException e) {
-//                        Toast.makeText(getApplicationContext(), "went wrong", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
             }
         }
         mRecyclerAdapterbank.notifyData(bankList);
         mRecyclerAdaptercrop.notifyData(cropList);
-//        mRecyclerAdapteAgro.notifyData(agrolist);
-//        mRecyclerAdapterExpert.notifyData(expertList);
-//        mRecyclerAdapterFarmer.notifyData(farmerList);
-//        mRecyclerAdapter.notifyData(agentList);
+        mRecyclerAdapteranimal.notifyData(animalList);
+        mRecyclerAdapterfarmmachine.notifyData(farmmachineList);
+        mRecyclerAdapterlabour.notifyData(labourList);
+        mRecyclerAdaptersoilresources.notifyData(soilresourcesList);
+        mRecyclerAdapterwaterresources.notifyData(waterresourcesList);
+        mRecyclerAdaptertoilets.notifyData(toiletsList);
+        mRecyclerAdapterelectricity.notifyData(electricityList);
+        mRecyclerAdapterfinancialinstitutions.notifyData(financialinstitutionsList);
+        mRecyclerAdapterschools.notifyData(schoolsList);
+        mRecyclerAdapterhospitals.notifyData(hospitalsList);
+        mRecyclerAdaptershops
+                .notifyData(shopsList);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_lan, menu);
+        MenuItem item = menu.findItem(R.id.language);
+        item.setVisible(false);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        //noinspection SimplifiableIfStatement
+        if (id == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        MarkerOptions marker = new MarkerOptions()
+                .position(new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0]), Double.parseDouble(vrp.getGeotag().split(",")[1])))
+                .title(vrp.getVoname())
+                .snippet(vrp.getGeotag().split(",")[0].substring(0, 7) + "," + vrp.getGeotag().split(",")[1].substring(0, 7));
+        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+        googleMap.addMarker(marker).showInfoWindow();
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(
+                new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0]), Double.parseDouble(vrp.getGeotag().split(",")[1]))).zoom(12).build();
+        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 }

@@ -1,9 +1,11 @@
 package info.androidhive.recyclerview;
 
-import com.github.bkhezry.mapdrawingtools.model.DataModel;
+
 import com.google.android.gms.maps.model.LatLng;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
+import info.androidhive.recyclerview.model.DataModel;
 
 
 /**

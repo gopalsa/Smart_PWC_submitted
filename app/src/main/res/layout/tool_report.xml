@@ -25,6 +25,7 @@
                 android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/toolreport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

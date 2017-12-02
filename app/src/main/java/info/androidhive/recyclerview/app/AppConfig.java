@@ -46,6 +46,8 @@ public class AppConfig {
 
     private static final Map<String, Integer> attendances = new HashMap<String, Integer>() {{
 
+        put("Informal Exposure Walk", R.string.InformalExposureWalk);
+
         put("Historical Timeline", R.string.HistoricalTimeline);
 
         put("Gender Analysis", R.string.GenderAnalysis);

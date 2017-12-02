@@ -8,13 +8,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
 
-import info.androidhive.recyclerview.app.AppConfig;
+import info.androidhive.recyclerview.db.DbReport;
 import info.androidhive.recyclerview.table.ui.SampleActivity;
 
 /**
@@ -26,24 +28,46 @@ public class ToolReport extends AppCompatActivity {
     public static final String mypreference = "mypref";
     public static final String tittle = "tittleKey";
     public static final String filename = "filenameKey";
+    public static final String vrpid = "vrpidKey";
     String tittleString;
+    String vrpString;
+    DbReport dbReport;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tool_report);
-
+        dbReport = new DbReport(this);
         sharedpreferences = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
         if (sharedpreferences.contains(tittle)) {
             tittleString = sharedpreferences.getString(tittle, "").trim();
+            vrpString = sharedpreferences.getString(vrpid, "").trim();
+        }
+        getSupportActionBar().setTitle(tittleString);
+        final EditText toolreport = (EditText) findViewById(R.id.toolreport);
+        try {
+            String tool = dbReport.getData(vrpString, tittleString, getResources().getString(R.string.toolreport));
+            if (tool != null)
+                toolreport.setText(tool);
+        } catch (Exception e) {
+            Log.d("ToolReport ", e.toString());
         }
         TextView submit = (TextView) findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent io = new Intent(ToolReport.this, HistoricalTimelinePhoto.class);
-                startActivity(io);
+                if (toolreport.getText().toString().length() > 0) {
+                    int success = dbReport.updatedata(vrpString, tittleString,
+                            getResources().getString(R.string.toolreport), toolreport.getText().toString());
+                    if (success == 0)
+                        dbReport.addData(vrpString, tittleString,
+                                getResources().getString(R.string.toolreport), toolreport.getText().toString());
+                    Intent io = new Intent(ToolReport.this, HistoricalTimelinePhoto.class);
+                    startActivity(io);
+                } else {
+                    toolreport.setError("Enter Tool Report");
+                }
             }
         });
     }

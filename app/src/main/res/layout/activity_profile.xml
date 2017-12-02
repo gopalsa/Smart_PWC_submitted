@@ -35,6 +35,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:context=".ProfileActivity" />
+                <ImageView
+                    android:id="@+id/allout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/accent"
+                    android:src="@drawable/ic_all_out_black_24dp"/>
             </FrameLayout>
             <LinearLayout
                 android:id="@+id/the_menu"
@@ -97,7 +106,7 @@
                             android:layout_width="1dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
-                            android:background="#ACACAC" />
+                            android:background="#F0F0F0" />
 
 
                         <LinearLayout
@@ -137,7 +146,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
 
@@ -225,7 +234,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -262,7 +271,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -351,7 +360,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -388,7 +397,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -479,7 +488,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -518,7 +527,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -608,7 +617,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -647,7 +656,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -737,7 +746,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -776,7 +785,7 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="60dp"
-                            android:background="#ACACAC" />
+                            android:background="@color/midline" />
 
 
                         <LinearLayout
@@ -950,488 +959,731 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewanimal"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="ANIMALS"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/animaldetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Animal details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addanimal"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/animallist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewfarmmachine"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="FARM MACHINES"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/farmmachinedetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Farmmachine details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addfarmmachine"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/farmmachinelist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewlabour"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="LABOUR"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/labourdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Labour details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addlabour"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/labourlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewsoilresources"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="SOIL RESOURCES"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/soilresourcesdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Soil Resources details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addsoilresources"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/soilresourceslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewwaterresources"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="WATER RESOURCES"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/waterresourcesdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Water Resources details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addwaterresources"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/waterresourceslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewtoilets"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="TOILETS"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/toiletsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Toilets details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addtoilets"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/toiletslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewelectricity"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="ELECTRICITY"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/electricitydetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Electricity details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addelectricity"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/electricitylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewfinancialinstitutions"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="FINANCIAL INSTITUTIONS"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/financialinstitutionsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Financial Institutions details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addfinancialinstitutions"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/financialinstitutionslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewschools"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="SCHOOLS"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/schoolsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Schools details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addschools"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/schoolslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewhospitals"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="HOSPITALS"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/hospitalsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Hospitals details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addhospitals"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/hospitalslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cardviewshops"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/cardviewagro"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
                 android:layout_margin="5dp"
-                android:clickable="true"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:background="#000"
+                android:elevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="left|center"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:padding="14dp"
-                        android:rotation="90"
-                        android:src="@drawable/ic_open_in_browser_black_24dp"
-                        android:tint="@color/accent" />
-
-                    <info.androidhive.recyclerview.CustomFontTextView
-                        style="@style/carddemo_suggested_header_text"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_weight="1"
-                        android:fontFeatureSettings="smcp"
-                        android:gravity="center_vertical"
-                        android:text="SHOPS"
-                        android:textAllCaps="false"
-                        android:textColor="@color/jaguar"
-                        android:textSize="15sp"
-                        app:font="maven" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <info.androidhive.recyclerview.CustomFontTextView
+                                android:id="@+id/shopsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Shops details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:font="maven" />
+
+                            <ImageView
+                                android:id="@+id/addshops"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/shopslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
+
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

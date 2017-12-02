@@ -17,7 +17,10 @@
 package info.androidhive.recyclerview.maps;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -36,6 +39,18 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         setUpMap();
+
+        final FloatingActionButton btnSatellite = (FloatingActionButton) findViewById(R.id.btnSatellite);
+        btnSatellite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mMap != null) {
+                    mMap.setMapType(mMap.getMapType() == GoogleMap.MAP_TYPE_HYBRID ? GoogleMap.MAP_TYPE_NORMAL : GoogleMap.MAP_TYPE_HYBRID);
+                    btnSatellite.setImageResource(mMap.getMapType() == GoogleMap.MAP_TYPE_HYBRID? R.drawable.ic_satellite_off : R.drawable.ic_satellite_on);
+                }
+            }
+        });
+
     }
 
     @Override
@@ -50,7 +65,7 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
             return;
         }
         mMap = map;
-        startDemo();
+       startDemo();
     }
 
     private void setUpMap() {

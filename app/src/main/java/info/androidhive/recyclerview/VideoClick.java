@@ -13,4 +13,6 @@ public interface VideoClick {
      void mapClick(int position);
 
      void imageClick(int position);
+
+     void reportClick(int position);
 }

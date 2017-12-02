@@ -1,30 +1,27 @@
 package info.androidhive.recyclerview;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-
-import com.google.android.youtube.player.YouTubeBaseActivity;
-
 
 import java.util.ArrayList;
 import java.util.List;
-
-import info.androidhive.recyclerview.app.AppController;
 
 public class MainActivity extends AppCompatActivity implements VideoClick {
     private List<Pra> praList = new ArrayList<>();
     private RecyclerView recyclerView;
     private PraAdapter mAdapter;
+    SharedPreferences sharedpreferences;
+    public static final String mypreference = "mypref";
+    public static final String tittle = "tittleKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,16 +42,17 @@ public class MainActivity extends AppCompatActivity implements VideoClick {
     }
 
     private void prepareMovieData() {
-        Pra pra = new Pra("Add  Team Members", "", "true", "");
+        Pra pra = new Pra("Add Team Members", "true", "true", "");
         praList.add(pra);
 
         pra = new Pra("Introduction to the Project & Project Area", "", "true", "");
         praList.add(pra);
 
-        pra = new Pra("Informal Exposure Walk", "", "true", "");
+        pra = new Pra("Informal Exposure Walk", "", "", "https://sites.google.com/site/faopratoolkit/");
         praList.add(pra);
 
-        pra = new Pra("Historical Timeline", "-07fOqnyXz8", "", "https://sites.google.com/site/faopratoolkit/historical-tiemline");
+        pra = new Pra("Historical Timeline", "-07fOqnyXz8", "",
+                "https://sites.google.com/site/faopratoolkit/historical-tiemline");
         praList.add(pra);
 
         pra = new Pra("Gender Analysis", "Cobx2T95et0", "", "https://sites.google.com/site/faopratoolkit/gender-analysis");
@@ -96,9 +94,14 @@ public class MainActivity extends AppCompatActivity implements VideoClick {
 
     @Override
     public void videoClick(int position) {
-        Intent io = new Intent(MainActivity.this, MainActivityVideo.class);
-        io.putExtra("video", praList.get(position).getGenre());
-        startActivity(io);
+        if (praList.get(position).getYear().equals("true")) {
+            Intent io = new Intent(MainActivity.this, TeamMember.class);
+            startActivity(io);
+        } else {
+            Intent io = new Intent(MainActivity.this, MainActivityVideo.class);
+            io.putExtra("video", praList.get(position).getGenre());
+            startActivity(io);
+        }
     }
 
     @Override
@@ -116,8 +119,24 @@ public class MainActivity extends AppCompatActivity implements VideoClick {
 
     @Override
     public void imageClick(int position) {
+        sharedpreferences = getSharedPreferences(mypreference,
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString(tittle, praList.get(position).getTitle());
+        editor.commit();
         Intent io = new Intent(MainActivity.this, CustomMarkerClusteringDemoActivity.class);
         io.putExtra("tittle", praList.get(position).getTitle());
+        startActivity(io);
+    }
+
+    @Override
+    public void reportClick(int position) {
+        sharedpreferences = getSharedPreferences(mypreference,
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString(tittle, praList.get(position).getTitle());
+        editor.commit();
+        Intent io = new Intent(MainActivity.this, FinalReport.class);
         startActivity(io);
     }
 

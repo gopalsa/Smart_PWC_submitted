@@ -42,6 +42,9 @@ import com.google.maps.android.clustering.ClusterManager;
 import com.google.maps.android.clustering.view.DefaultClusterRenderer;
 import com.google.maps.android.ui.IconGenerator;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -51,6 +54,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import info.androidhive.recyclerview.db.DbImage;
 import info.androidhive.recyclerview.db.DbVrp;
 import info.androidhive.recyclerview.maps.BaseDemoActivity;
 import info.androidhive.recyclerview.maps.MultiDrawable;
@@ -63,12 +67,14 @@ public class CustomMarkerClusteringDemoActivity extends BaseDemoActivity impleme
     private ClusterManager<Person> mClusterManager;
     private Random mRandom = new Random(1984);
     DbVrp dbVrp;
+    String tittleString;
+    DbImage dbImage;
 
     SharedPreferences sharedpreferences;
     public static final String mypreference = "mypref";
     public static final String vrpid = "vrpidKey";
     public static final String update = "updateKey";
-
+    public static final String tittle = "tittleKey";
     String vrpId = "";
     private Vrp vrp;
 
@@ -191,14 +197,18 @@ public class CustomMarkerClusteringDemoActivity extends BaseDemoActivity impleme
     protected void startDemo() {
 
         dbVrp = new DbVrp(this);
+        dbImage = new DbImage(this);
         sharedpreferences = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
         if (sharedpreferences.contains(vrpid)) {
             vrpId = sharedpreferences.getString(vrpid, "").trim();
+            tittleString = sharedpreferences.getString(tittle, "").trim();
         }
+//        getActionBar().setTitle(tittleString);
+
         vrp = new Gson().fromJson(ConvertUtils.sample(dbVrp.getDataByvrpid(vrpId).get(1)), Vrp.class);
 
-        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0]),Double.parseDouble(vrp.getGeotag().split(",")[1])), 9.5f));
+        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0]), Double.parseDouble(vrp.getGeotag().split(",")[1])), 9.5f));
 
         mClusterManager = new ClusterManager<Person>(this, getMap());
         mClusterManager.setRenderer(new PersonRenderer());
@@ -215,40 +225,28 @@ public class CustomMarkerClusteringDemoActivity extends BaseDemoActivity impleme
     }
 
     private void addItems() {
-        // http://www.flickr.com/photos/sdasmarchives/5036248203/
-        mClusterManager.addItem(new Person(position(100), "Walter", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/usnationalarchives/4726917149/
-        mClusterManager.addItem(new Person(position(50), "Gran", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/nypl/3111525394/
-        mClusterManager.addItem(new Person(position(80), "Ruth", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/smithsonian/2887433330/
-        mClusterManager.addItem(new Person(position(90), "Stefan", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/library_of_congress/2179915182/
-        mClusterManager.addItem(new Person(position(40), "Mechanic", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/nationalmediamuseum/7893552556/
-        mClusterManager.addItem(new Person(position(110), "Yeats", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/sdasmarchives/5036231225/
-        mClusterManager.addItem(new Person(position(150), "John", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/anmm_thecommons/7694202096/
-        mClusterManager.addItem(new Person(position(70), "Trevor the Turtle", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-        // http://www.flickr.com/photos/usnationalarchives/4726892651/
-        mClusterManager.addItem(new Person(position(60), "Teach", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/APJAbdulKalam.jpg/220px-APJAbdulKalam.jpg"));
-
-
+        List<String> history = new ArrayList<>();
+        if (tittleString.equals("villgeprofile")) {
+            history = dbImage.getAllData(vrpId);
+        } else {
+            history = dbImage.getAllData(vrpId, tittleString);
+        }
+        for (int i = 0; i < history.size(); i++) {
+            JSONObject jsonObject = new JSONObject();
+            try {
+                jsonObject = new JSONObject(history.get(i));
+                mClusterManager.addItem(new Person(new LatLng(Double.parseDouble(jsonObject.getString("geotag").split(",")[0]), Double.parseDouble(jsonObject.getString("geotag").split(",")[1])),
+                        jsonObject.getString("name"), jsonObject.getString("image")));
+            } catch (JSONException e) {
+                Log.d("HistoricalTimelinePhoto", e.toString());
+            }
+        }
     }
 
     private LatLng position(int r) {
-        LatLng latLng=getRandomLocation(new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0].substring(0,6))
-                ,Double.parseDouble(vrp.getGeotag().split(",")[1].substring(0,6))),r);
-        Log.d("latlonxx",String.valueOf(latLng.latitude)+","+String.valueOf(latLng.longitude));
+        LatLng latLng = getRandomLocation(new LatLng(Double.parseDouble(vrp.getGeotag().split(",")[0].substring(0, 6))
+                , Double.parseDouble(vrp.getGeotag().split(",")[1].substring(0, 6))), r);
+        Log.d("latlonxx", String.valueOf(latLng.latitude) + "," + String.valueOf(latLng.longitude));
         return latLng;
     }
 
@@ -266,7 +264,7 @@ public class CustomMarkerClusteringDemoActivity extends BaseDemoActivity impleme
         myLocation.setLongitude(point.longitude);
 
         //This is to generate 10 random points
-        for(int i = 0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             double x0 = point.latitude;
             double y0 = point.longitude;
 

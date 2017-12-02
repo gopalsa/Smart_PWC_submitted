@@ -58,6 +58,9 @@
 \n\nStep 3: Entered into flip charts.\n\n\n\n
 </string>
 
+    <string name="InformalExposureWalk">Step 1:PRA team conduct informal Exposure Walk in Village\n\n
+Step 2: Observe and Record all information during Informal Exposure Walk.\n\n\n\n
+</string>
 
     <string name="selectable">selectable</string>
     <string name="dateandtime">dateandtime</string>
@@ -71,7 +74,6 @@
     <string name="spinner_title">Select Plot</string>
     <string name="user_name">User Name</string>
     <string name="permission_text">Autocomplete email address.</string>
-
 
 
     <string name="pick_csv_file">Add CSV table from your phone memory and you can read and edit it.</string>
@@ -115,5 +117,15 @@
     <string name="unexpected_error">Unexpected error</string>
     <string name="no_such_file_error">No such csv file</string>
     <string name="not_csv_file_error">Not csv file</string>
+    <string name="area_label">Area: \u0020</string>
+    <string name="length_label">Length: \u0020</string>
+    <string name="m_label">\u0020 m</string>
+    <string name="mm_label">\u0020 m^2</string>
+
+    <string name="additionalInfo">additionalinfo</string>
+    <string name="toolreport">toolreport</string>
+    <string name="observation">observation</string>
+    <string name="attendance">attendance</string>
+    <string name="history">history</string>
 
 </resources>

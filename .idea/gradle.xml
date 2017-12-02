@@ -9,9 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library-gmail" />
-            <option value="$PROJECT_DIR$/library-map" />
             <option value="$PROJECT_DIR$/library-tableformat" />
             <option value="$PROJECT_DIR$/multisnaprecyclerview" />
             <option value="$PROJECT_DIR$/qrmodule" />

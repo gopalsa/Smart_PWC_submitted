@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -34,7 +35,7 @@ Result on flipchart and community discussion on Historical time line"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/profile_image"
+                    android:id="@+id/historyaddimage"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_below="@+id/tittletxt"
@@ -42,15 +43,32 @@ Result on flipchart and community discussion on Historical time line"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/ic_add_a_photo_black_24dp" />
 
-                <EditText
-                    android:id="@+id/subtittletxt"
-                    android:layout_width="wrap_content"
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardviewbankhistory"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_image"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:hint="Name of the Photo"
-                    android:textSize="15dp" />
+                    android:layout_below="@+id/historyaddimage"
+                    android:layout_margin="5dp"
+                    android:background="#000"
+                    android:elevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+                        <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                            android:id="@+id/historylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            app:msrv_gravity="start"
+                            app:msrv_snap_count="1" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
             </RelativeLayout>
         </LinearLayout>

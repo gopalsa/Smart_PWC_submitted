@@ -11,12 +11,10 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.net.ConnectivityManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
@@ -26,18 +24,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-//
+
 import com.github.bkhezry.extramaputils.builder.ExtraMarkerBuilder;
 import com.github.bkhezry.extramaputils.builder.ExtraPolygonBuilder;
 import com.github.bkhezry.extramaputils.builder.ViewOptionBuilder;
 import com.github.bkhezry.extramaputils.model.ExtraMarker;
 import com.github.bkhezry.extramaputils.model.ViewOption;
 import com.github.bkhezry.extramaputils.utils.MapUtils;
-
-import com.github.bkhezry.mapdrawingtools.model.DataModel;
-import com.github.bkhezry.mapdrawingtools.model.DrawingOption;
-import com.github.bkhezry.mapdrawingtools.ui.BaseActivity;
-import com.github.bkhezry.mapdrawingtools.utils.CalUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -64,23 +57,25 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
 import com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView;
 
-
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 import info.androidhive.recyclerview.db.DbVrp;
+import info.androidhive.recyclerview.model.DataModel;
+import info.androidhive.recyclerview.model.DrawingOption;
+import info.androidhive.recyclerview.ui.BaseActivity;
+import info.androidhive.recyclerview.utils.CalUtils;
 import pl.charmas.android.reactivelocation.ReactiveLocationProvider;
 import rx.Observable;
 import rx.Subscription;
 import rx.functions.Action1;
 import rx.subscriptions.CompositeSubscription;
+
+//
 
 public class MapsFragActivity extends BaseActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {

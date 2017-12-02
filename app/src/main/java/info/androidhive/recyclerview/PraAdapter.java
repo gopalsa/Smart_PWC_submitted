@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,8 @@ public class PraAdapter extends RecyclerView.Adapter<PraAdapter.MyViewHolder> {
         private final LinearLayout vidolin;
         private final LinearLayout infolin;
         private final LinearLayout locationlin;
+        private final ImageView imagevideo;
+        private final LinearLayout descriptionlin;
         public TextView title;
         private final LinearLayout addimagelin;
 
@@ -41,6 +44,8 @@ public class PraAdapter extends RecyclerView.Adapter<PraAdapter.MyViewHolder> {
             infolin = (LinearLayout) view.findViewById(R.id.infolin);
             locationlin = (LinearLayout) view.findViewById(R.id.locationlin);
             addimagelin = (LinearLayout) view.findViewById(R.id.addimagelin);
+            descriptionlin = (LinearLayout) view.findViewById(R.id.descriptionlin);
+            imagevideo = (ImageView) view.findViewById(R.id.imagevideo);
         }
     }
 
@@ -68,6 +73,7 @@ public class PraAdapter extends RecyclerView.Adapter<PraAdapter.MyViewHolder> {
         } else {
             holder.infolin.setVisibility(View.VISIBLE);
             holder.vidolin.setVisibility(View.VISIBLE);
+            holder.imagevideo.setImageResource(R.drawable.ic_play_circle_outline_black_24dp);
         }
         holder.title.setText(pra.getTitle());
         holder.infolin.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +101,12 @@ public class PraAdapter extends RecyclerView.Adapter<PraAdapter.MyViewHolder> {
                 videoClick.imageClick(position);
             }
         });
-
+        holder.descriptionlin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                videoClick.reportClick(position);
+            }
+        });
         holder.title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,6 +118,11 @@ public class PraAdapter extends RecyclerView.Adapter<PraAdapter.MyViewHolder> {
                     editor.commit();
                     Intent io = new Intent(mContext, AttendancePage.class);
                     mContext.startActivity(io);
+                } else if (pra.getYear().equalsIgnoreCase("true")) {
+                    if (pra.getGenre().equals("true")) {
+                        Intent io = new Intent(mContext, TeamMember.class);
+                        mContext.startActivity(io);
+                    }
                 } else {
                     Toast.makeText(mContext, pra.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
                 }

@@ -68,10 +68,19 @@
             android:name=".ToolReport"
             android:windowSoftInputMode="stateHidden" />
         <activity
+            android:name=".FinalReport"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
             android:name=".HistoricalTimelinePhoto"
             android:windowSoftInputMode="stateHidden" />
         <activity
+            android:name=".CustomMarkerClusteringDemoActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
             android:name=".AdditionalInformation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TeamMember"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".Observation"
@@ -85,7 +94,7 @@
         <activity
             android:name=".MapsFragActivity" />
         <activity android:name="katomaran.evao.lib.qrmodule.activity.QrScannerActivity" />
-        <activity android:name=".CustomMarkerClusteringDemoActivity"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.com.vansuita.pickimage.provider"
