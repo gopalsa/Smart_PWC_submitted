@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+group = 'com.schibstedspain.android'
+version = '0.10.1'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 28
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        warning 'MissingPermission'
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-base:11.0.4'
+    implementation 'com.google.android.gms:play-services-location:11.0.4'
+    implementation 'com.google.android.gms:play-services-maps:11.0.4'
+    implementation 'com.google.android.gms:play-services-places:11.0.4'
+    implementation 'io.reactivex:rxjava:1.1.9'
+}
+
+publish {
+    userOrg = 'schibstedspain'
+    groupId = 'com.schibstedspain.android'
+    artifactId = 'android-reactive-location'
+    publishVersion = '0.10.1'
+    desc = 'Small library that wraps Google Play Services API in brilliant RxJava Observables reducing boilerplate to minimum.'
+    website = 'https://github.com/SchibstedSpain/Android-ReactiveLocation'
+}

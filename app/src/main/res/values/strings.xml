@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Smart PRA</string>
+    <string name="app_name">Smart GEO PRA UBA 2.0</string>
     <string name="action_settings">Settings</string>
+    <string name="Submit">Submit</string>
+
     <string name="HistoricalTimeline">Step 1:Group discusion and brainstorming with the community;
 
 \n\nStep 2: Coming up with history of village;
@@ -127,5 +129,121 @@ Step 2: Observe and Record all information during Informal Exposure Walk.\n\n\n\
     <string name="observation">observation</string>
     <string name="attendance">attendance</string>
     <string name="history">history</string>
+    <string name="locationPermissionAlert">Please Enable this permission to identify  your breeds on the google map by other farmers</string>
+
+    <string name="respondentsProfile">1) Respondents Profile</string>
+    <string name="name">1.1) Name</string>
+    <string name="gender">1.2) Gender</string>
+    <string name="age">1.3) Age</string>
+    <string name="household"> 1.4) Relationship with Head of Household</string>
+    <string name="contactNo">1.5) Contact Number</string>
+    <string name="idCardType">1.6) Identity Card Type</string>
+    <string name="idCardNo">1.7) Identity Card Number</string>
+
+
+    <string name="generalHouseInfo">2)  General Household Information</string>
+    <string name="householdId">2.1)Household ID</string>
+    <string name="nameOfhead">2.2) Name of the Head (Household)</string>
+    <string name="houseGender">2.3) Gender</string>
+    <string name="category">2.4) Category</string>
+    <string name="povertyStatus">2.5) Poverty Status</string>
+    <string name="ownHouse">2.6) Own House</string>
+    <string name="typeOfHouse">2.7)Type of House</string>
+    <string name="toilet">2.8) Toilet</string>
+    <string name="drainage">2.9) Drainage linked to House</string>
+    <string name="wasteSystem">2.10) Waste Collection System</string>
+    <string name="compostPit">2.11) Compost Pit</string>
+    <string name="biogasPlant">2.12) Biogas Plant</string>
+    <string name="annualInncom">2.13) Annual Income from all Sources (Approx.)</string>
+
+
+    <string name="familyMemberInfo">3) Family Member Information</string>
+    <string name="relationship">3.0) Relationship</string>
+    <string name="familyName">3.1) Name</string>
+    <string name="familyAge">3.2) Age</string>
+    <string name="familySex">3.3) Sex</string>
+    <string name="maritalStatus">3.4) Marital Status</string>
+    <string name="education">3.5) Level of Education</string>
+    <string name="sclCol">3.6) Going to AWC/School/College</string>
+    <string name="aadhaarNo">3.7) Aadhaar Card</string>
+    <string name="bank">3.8) Bank A/C</string>
+    <string name="computeLiterate">3.9) Computer Literate</string>
+    <string name="socialSecurity">3.10) Social Security Pension</string>
+    <string name="majorHealth">3.11) Major Health Problems</string>
+    <string name="jobCard">3.12) MNREGA Job Card</string>
+    <string name="groupTick">3.13) Self Help Groups</string>
+    <string name="occupationCode">3.14) Occupations Code</string>
+
+    <string name="migrationStatus">4)  Migration Status in a family</string>
+    <string name="migrateWork">4.1) Does any member of the household migrate for Work?</string>
+    <string name="familyMigrat">If Yes How many members of the family migrated</string>
+    <string name="migratedays">Family migrates for how many days/ months?</string>
+    <string name="migratePlace">Since how many years the migration is taking place?</string>
+
+    <string name="infoGovermentSchemes">5) Information of Government Schemes </string>
+    <string name="pmJan">5.1) PM Jan Dhan Yojana</string>
+    <string name="pmUjjwala">5.2) PM Ujjwala Yojana</string>
+    <string name="pmAwas">5.3) PM Awas Yojana</string>
+    <string name="sukanya">5.4) Sukanya Samridhi Yojana</string>
+    <string name="mudra">5.5) Mudra Yojana</string>
+    <string name="pmJivan">5.6) PM Jivan Jyoti Bima Yojana</string>
+    <string name="pmSuraksha">5.7) PM Suraksha Bima Yojana</string>
+    <string name="atal">5.8) Atal pension Yojana</string>
+    <string name="fasal">5.9) Fasal Bima Yojana</string>
+    <string name="kaushal">5.10) Kaushal Vikas Yojana</string>
+    <string name="krishi">5.11) Krishi Sinchai Yojana</string>
+    <string name="janAushadi">5.12) Jan Aushadi Yojana</string>
+    <string name="swachh">5.13) Swachh Bharat Mission Toilet</string>
+    <string name="soilHealth">5.14) Soil Health Card</string>
+    <string name="ladli">5.15) Ladli Lakshmi Yojana</string>
+    <string name="janani">5.16) Janani Suraksha Yojana</string>
+    <string name="kisan">5.17) Kisan Credit Card</string>
+
+
+    <string name="sourceOfWater">6) Source of Water (Distance from source in kms)</string>
+    <string name="pipedWater">6.1) Piped Water at Home</string>
+    <string name="communityWater">6.2) Community Water Tap </string>
+    <string name="handPump">6.3) Hand Pump (Public / Private) </string>
+    <string name="openWell">6.4) Open Well (Public / Private) </string>
+    <string name="modeWaterStorage">6.5) Mode of Water Storage (Community/Individual)</string>
+    <string name="anyOtherSource">6.6) Any other source (mention)</string>
+
+
+    <string name="sourceOfEnergyandPower">7) Source of Energy and Power</string>
+    <string name="electHousehold">7.1) Electricity Connection to Household</string>
+    <string name="electDay">7.2) Electricity Availability per day (hours)</string>
+    <string name="electLight">7.3) Lighting</string>
+    <string name="electCooking">7.4) Cooking</string>
+    <string name="electCullah">7.5) If cooking in Chullah</string>
+
+
+    <string name="landHoldingInfo">8) Landholding Information (in Acres)</string>
+    <string name="cultivableArea">8.1) Cultivable Area</string>
+    <string name="irrigatedArea">8.2) Irrigated Area</string>
+    <string name="unIrrigated">8.3) Un irrigated Area</string>
+    <string name="barran">8.4) Barren/Wasteland area</string>
+    <string name="unCultArea">8.5) Uncultivable Area</string>
+
+
+    <string name="agriculturalInputs">9) Agricultural Inputs </string>
+    <string name="chemicalFertilisers">9.1) Do you use Chemical Fertilisers</string>
+    <string name="chemicalInsecticides">9.2) Do you use Chemical Insecticides</string>
+    <string name="weedicide">9.3) Do you use Chemical Weedicide</string>
+    <string name="manures">9.4) Do You use organic Manures</string>
+    <string name="irrigation">9.5) Irrigation</string>
+    <string name="irrigationSystem">9.6) Irrigation System</string>
+
+    <string name="liveStockNo">11) Livestock Numbers</string>
+    <string name="cows">11.1) Cows</string>
+    <string name="Buffalo">11.2) Buffalo</string>
+    <string name="goatsSheep">11.3) Goats/Sheep</string>
+    <string name="calves">11.4) Calves</string>
+    <string name="bullocks">11.5) Bullocks</string>
+    <string name="poultryDucks">11.6) Poultry/Ducks</string>
+    <string name="liveStockOthers">11.7) Livestock Others (mention)</string>
+    <string name="shelterforLivestock">11.8) Shelter for Livestock</string>
+    <string name="averageMilk">11.9) Average Daily Production of Milk(Litres)</string>
+    <string name="animalWaste">11.10) Animal Waste/Cow Dung (in Kgs.)</string>
+
 
 </resources>

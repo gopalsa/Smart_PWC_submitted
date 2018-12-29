@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/villageSerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="   Serial No"
+            android:inputType="number"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/villageVillage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  Cluster/Village"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/villageBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  Block"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/villageDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="   District"
+            android:textSize="15dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/villageHeadOfVillage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="   Name and Contact detail of head of village/sarpanch"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/villageKeyContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="   Name and Contact detail of head of key contact person in village"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/market"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:padding="12dp"
+        android:text="SUBMIT"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+</LinearLayout>

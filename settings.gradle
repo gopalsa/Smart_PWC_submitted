@@ -1,1 +1,2 @@
-include ':app',':multisnaprecyclerview',':library-gmail',':rosetta',':qrmodule',':library-tableformat'
+include ':app',':multisnaprecyclerview',':library-gmail',':rosetta',':qrmodule',':library-tableformat',':datetimepicker-library',':library-draw'
+include ':android-reactive-location',':library-utills',':circleimageview',':photoview', ':exoplayerview',':anychart'

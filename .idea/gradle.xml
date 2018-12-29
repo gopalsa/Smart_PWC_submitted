@@ -8,10 +8,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android-reactive-location" />
+            <option value="$PROJECT_DIR$/anychart" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/circleimageview" />
+            <option value="$PROJECT_DIR$/datetimepicker-library" />
+            <option value="$PROJECT_DIR$/exoplayerview" />
+            <option value="$PROJECT_DIR$/library-draw" />
             <option value="$PROJECT_DIR$/library-gmail" />
             <option value="$PROJECT_DIR$/library-tableformat" />
+            <option value="$PROJECT_DIR$/library-utills" />
             <option value="$PROJECT_DIR$/multisnaprecyclerview" />
+            <option value="$PROJECT_DIR$/photoview" />
             <option value="$PROJECT_DIR$/qrmodule" />
             <option value="$PROJECT_DIR$/rosetta" />
           </set>

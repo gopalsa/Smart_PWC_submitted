@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/technologiesSerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Serial No"
+            android:inputType="number"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/technologiesTechnology"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Technology"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/technologiesSubjectArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SubjectArea"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/technologiesWhetherTransferred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Whether Transferred/diseminated"
+            android:textSize="15dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/technologiesImpact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Impact Assessment"
+            android:textSize="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/market"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:padding="12dp"
+        android:text="SUBMIT"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

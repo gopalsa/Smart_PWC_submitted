@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.sanaji.mytask.MainActivityAction">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="PLAN OF ACTION"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/institute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INSTITUTE DETAILS"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/institutionparicipatingInstitution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Participating Institution" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/institutioncoordinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Coordinate" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/institutionEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Email-id" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/institutionContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Contact Number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/institutionVillage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Village" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/institutionDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="District" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+
+                android:id="@+id/major"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:text="MAJOR ISSUES AND PROPOSED PLAN OF ACTION"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/addField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textStyle="bold"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/addFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/majorList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/carried"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_span="2"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="ACTIVITIES CARRIED OUT AT GRAM SABHA LEVEL"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Student/Faculty visit for interaction" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Status" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activitystudentRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Remark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityMeeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Meeting with Gram Panchayat Member" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityMeetingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Status" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityMeetingRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Remark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityInteraction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Interaction with Local Government Official" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityInteractionStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Status" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityInteractionRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Remark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityAwareness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Awareness Program or Any other Program Organised" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityAwarenessStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Status" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activityAwarenessRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Remark" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+
+                android:id="@+id/pis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:text="MONTHLY ACTIVITY REPORT FOR PARTICIPATING INSTITUTIONS(PIS)"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/participating_institution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="PARTICIPATING INSTITUTION"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/reportingPeriod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reporting Period" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/holy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="holy" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/contact_detail-uba_office"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="CONTACT DETAILS-UBA OFFICE"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold">
+
+                    <TextView
+                        android:id="@+id/ubaAddRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/ubaAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ubaFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/details_of_village"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="30dp"
+                android:layout_span="2"
+                
+                android:padding="10dp"
+                android:text="DETAILS OF CLUSTERS / VILLAGE"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:textStyle="bold">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/villageAddField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/monthlyAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/villagefarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/working_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="30dp"
+                android:layout_span="2"
+                
+                android:padding="10dp"
+                android:text="DETAILS OF THE WOKING GROUP , INCLUDING COORDINATOR( DETAILS OF FACULTY MEMBERS,RESEARCH SCHOLARS, STAFF AND OTHER STUDENTS INVOLVED):"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:textStyle="bold">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailAddField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/detailAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/workingGroupfarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="30dp"
+                android:layout_span="2"
+                
+                android:padding="10dp"
+                android:text="1.ACTIVITIES IN THE INSTITUTE UNDER UBA "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/academic_activies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="1dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="a.Academic Activities( Ph.D/MTech dissertation/B.Tech Projects/Credit and non-credit courses/Any other)related to rural development : "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold">
+
+                    <TextView
+                        android:id="@+id/academicAddField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/academicAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/academicFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/bextra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="b.Extra-curricular Activities (NSS/Events in student programmes like Tech Fest) :"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/ExtraCurricular"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/Aactivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="2.ACTIVITIES UNDERTAKEN IN THE VILLAGES(DETAILS OF THE ACTIVITIES ALONG WITH VISUALS MAY BE ENCLOSED AS ANNEXES) : "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/Details_of_the_visits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="a.Details of the visits "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold">
+
+                    <TextView
+                        android:id="@+id/activitiesAddField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/activitiesAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activityDetailFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/activitiestrural"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                
+                android:padding="3dp"
+                android:text="b.The extent and nature of interaction with rural areas, field functionaries, voluntary organisations and Govt.developmental bodies. :"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <MultiAutoCompleteTextView
+
+                android:id="@+id/interactionWithRural"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_marginTop="1dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/ctdistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="c.The extent and nature of interaction with District Administration (Specify the chalenges/Problems faced)"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <MultiAutoCompleteTextView
+
+                android:id="@+id/interactionWithDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/dbase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="d.Base line Survey"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/aavillagee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="i) Village Survey"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:textStyle="bold">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/baseVillageAddRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/baseVillageAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/baseVillageFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/baseHouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="ii)Household Survey"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/baseHouseAddRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/baseHouseAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/householdFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/meetings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="f.Meetings/Workshop"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/meetingAddRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/meetingsAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/meetingFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/villageDevelopmentAddField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="g.Village Development Plan"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:textStyle="bold">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/villageDevelopmentAddRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/villageDevelopmentAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/villageDevelopmentFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+
+            <TextView
+
+                android:id="@+id/salient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="h.Salient projects conducted in different areas of intervention(Education/Health Awareness/Water/Agriculture/Energy etc.)"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:textStyle="bold">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/salientAddRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/salientAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/salientFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="i.Technologies developed and transferred/ disseminated, tangible field intervensions and their impact."
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/technologiesAddRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/technologiesAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/technologiesFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+
+                android:id="@+id/potential"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="3.POTENTIAL AREA OF FUTURE INTERVENTION(WITH SMALL BACKGROUND NOTE):"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <MultiAutoCompleteTextView
+
+                android:id="@+id/activityPotential"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/challenges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:text="5.CHALLENGES/PROBLEMS ETC :"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <MultiAutoCompleteTextView
+
+                android:id="@+id/activityChallenges"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/anyOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                
+                android:padding="3dp"
+                android:text="6.ANY OTHER RELEVANT INFORMATION :"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <MultiAutoCompleteTextView
+
+                android:id="@+id/activityAnyOther"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="3dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/vdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="VILLAGE DEVELOPMENT (VDP)"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/vdpAddplace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/vdpAddplaceFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/vdpFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+
+            <TextView
+
+                android:id="@+id/proposal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="PROPOSAL REVIEW"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+
+                android:id="@+id/technologyDevelopment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="Technology Development Proposals"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/technologyDevelopmentAddField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/technologyDevelopmentAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/technologyDevelopmentFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+
+            <TextView
+
+                android:id="@+id/technologycustomisation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="Technology customisation proposals"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/technologyAddAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/technologyAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/technologycustomisationFarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+
+            <TextView
+
+                android:id="@+id/miscellaneous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginTop="10dp"
+                android:layout_span="2"
+                android:padding="10dp"
+                android:text="Miscellaneous fund proposal"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/miscellaneousAddAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Field"
+                        android:textAllCaps="false"
+                        android:textColor="#232237"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/miscellaneousAddFarmPowerImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle_outline_black_24dp"
+                        android:tint="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/miscellaneousarmPowerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:text="SUBMIT" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

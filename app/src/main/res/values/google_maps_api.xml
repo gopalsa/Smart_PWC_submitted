@@ -5,5 +5,5 @@
     https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=8F:C2:34:11:FE:D5:D1:10:6D:BF:61:57:F2:71:09:87:D1:0A:CE:C3%3Binfo.androidhive.recyclerview
 
     -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAb9eFfga5vAVEUnyEMZ3fhQoZejqTDVOM</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBufZZ6hR1jYcnwqXg2egbpvCU8Vbd2UU0</string>
 </resources>

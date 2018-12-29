@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Smart_pra.iml" filepath="$PROJECT_DIR$/Smart_pra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Smart_pra_ngc.iml" filepath="$PROJECT_DIR$/Smart_pra_ngc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-reactive-location/android-reactive-location.iml" filepath="$PROJECT_DIR$/android-reactive-location/android-reactive-location.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anychart/anychart.iml" filepath="$PROJECT_DIR$/anychart/anychart.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circleimageview/circleimageview.iml" filepath="$PROJECT_DIR$/circleimageview/circleimageview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datetimepicker-library/datetimepicker-library.iml" filepath="$PROJECT_DIR$/datetimepicker-library/datetimepicker-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exoplayerview/exoplayerview.iml" filepath="$PROJECT_DIR$/exoplayerview/exoplayerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-draw/library-draw.iml" filepath="$PROJECT_DIR$/library-draw/library-draw.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-gmail/library-gmail.iml" filepath="$PROJECT_DIR$/library-gmail/library-gmail.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-tableformat/library-tableformat.iml" filepath="$PROJECT_DIR$/library-tableformat/library-tableformat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-utills/library-utills.iml" filepath="$PROJECT_DIR$/library-utills/library-utills.iml" />
       <module fileurl="file://$PROJECT_DIR$/multisnaprecyclerview/multisnaprecyclerview.iml" filepath="$PROJECT_DIR$/multisnaprecyclerview/multisnaprecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/photoview/photoview.iml" filepath="$PROJECT_DIR$/photoview/photoview.iml" />
       <module fileurl="file://$PROJECT_DIR$/qrmodule/qrmodule.iml" filepath="$PROJECT_DIR$/qrmodule/qrmodule.iml" />
       <module fileurl="file://$PROJECT_DIR$/rosetta/rosetta.iml" filepath="$PROJECT_DIR$/rosetta/rosetta.iml" />
     </modules>

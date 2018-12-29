@@ -54,7 +54,7 @@ public final class QrGenerator {
     }
 
     public Bitmap createQRCode()
-            throws WriterException {
+            throws Exception {
         Hashtable<EncodeHintType, Object> hints = new Hashtable<>();
 
         hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
@@ -150,7 +150,7 @@ public final class QrGenerator {
         private ErrorCorrectionLevel mEcl = ErrorCorrectionLevel.L;
         private PorterDuff.Mode mXFerMode = PorterDuff.Mode.SRC_OVER;
 
-        public Bitmap encode() throws WriterException {
+        public Bitmap encode() throws Exception {
             return new QrGenerator(this).createQRCode();
         }
 

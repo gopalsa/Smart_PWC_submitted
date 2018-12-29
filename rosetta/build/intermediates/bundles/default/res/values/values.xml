@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Coconut</string>
-    <string name="language_switcher_dialog_title">Language</string>
-    <string name="language_switcher_negative_button">Cancel</string>
-    <string name="language_switcher_positive_button">Ok</string>
-</resources>

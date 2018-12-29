@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".ProfileActivity" />
+                <ImageView
+                    android:id="@+id/allout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/accent"
+                    android:src="@drawable/ic_all_out_black_24dp"/>
+            </FrameLayout>
+            <LinearLayout
+                android:id="@+id/the_menu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardviewagro"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/totalpopulation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5,9k"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Total Population(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:background="#F0F0F0" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/area"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="200"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/customFontTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Area(ha)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/households"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Households(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardviewagro"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/populationmale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5,9k"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Population Male(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/populationfemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Population Female(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/populationothers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="200"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Population Others(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardviewagro"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/childrenmale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5,9k"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Children Male(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/childrenfemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Children Female(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/childrenothers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5,9k"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Children Others(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardviewagro"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/stmembers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/customFontTextView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="ST members(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/scmembers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="200"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="SC members(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/obcmembers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5,9k"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="OBC members(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardviewagro"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/noofshg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="No Of SHG(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/vomembers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="200"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="VO members(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/fpomembers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5,9k"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="FPO members(#)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardviewagro"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/forestarea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="17"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Forest Area(ha)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/cultivatedarea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="200"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Cultivated Area(ha)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:background="@color/midline" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/otherarea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5,9k"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                app:fontName="maven" />
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:letterSpacing="0.1"
+                                android:text="Other Area(ha)"
+                                android:textColor="#000"
+                                android:textSize="12dp"
+                                app:fontName="maven" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewbank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/bankdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Bank details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addbank"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/banklist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewcrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/cropdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Crop details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addcrop"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/croplist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewanimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/animaldetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Animal details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addanimal"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/animallist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewfarmmachine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/farmmachinedetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Farmmachine details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addfarmmachine"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/farmmachinelist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewlabour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/labourdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Labour details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addlabour"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/labourlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewsoilresources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/soilresourcesdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Soil Resources details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addsoilresources"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/soilresourceslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewwaterresources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/waterresourcesdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Water Resources details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addwaterresources"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/waterresourceslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewtoilets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/toiletsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Toilets details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addtoilets"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/toiletslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewelectricity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/electricitydetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Electricity details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addelectricity"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/electricitylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewfinancialinstitutions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/financialinstitutionsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Financial Institutions details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addfinancialinstitutions"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/financialinstitutionslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewschools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/schoolsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Schools details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addschools"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/schoolslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewhospitals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/hospitalsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Hospitals details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addhospitals"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/hospitalslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewshops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/the_menu"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="left|center"
+                            android:orientation="horizontal">
+
+                            <nec.cst.pra.CustomFontTextView
+                                android:id="@+id/shopsdetail"
+                                style="@style/carddemo_suggested_text_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Shops details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/jaguar"
+                                android:textSize="16sp"
+                                app:fontName="maven" />
+
+                            <ImageView
+                                android:id="@+id/addshops"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                        android:id="@+id/shopslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        app:msrv_gravity="start"
+                        app:msrv_snap_count="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:gravity="bottom">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/editlinear"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#F44336"
+            android:elevation="50dp"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:tint="@color/white"
+            app:borderWidth="0dp"
+            app:fabSize="normal" />
+    </LinearLayout>
+
+</RelativeLayout>

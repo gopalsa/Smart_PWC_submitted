@@ -8,5 +8,9 @@
         android:icon="@drawable/ic_edit_location_black_24dp"
         android:title="Profile"
         app:showAsAction="always" />
-
+    <item
+        android:id="@+id/upload"
+        android:icon="@drawable/ic_cloud_upload_black_24dp"
+        android:title="Upload"
+        app:showAsAction="always" />
 </menu>

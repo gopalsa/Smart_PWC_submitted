@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.2'
 
     defaultConfig {
-        applicationId "info.androidhive.recyclerview"
-        minSdkVersion 17
-        targetSdkVersion 25
+        applicationId "nec.cst.pra"
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
+        useLibrary 'org.apache.http.legacy'
         versionName "1.0"
         multiDexEnabled true
     }
@@ -18,40 +19,82 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'org/apache/http/version.properties'
+        exclude 'org/apache/http/client/version.properties'
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/plan',
+                            'src/main/res/layouts/house',
+                            'src/main/res/layouts/main',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
+
 }
 
 dependencies {
-    compile 'com.android.support:multidex:1.0.0'
-   // compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.+'
-    compile 'de.hdodenhof:circleimageview:2.2.0'
-    compile files('libs/YouTubeAndroidPlayerApi.jar')
-   // compile project(':library-map')
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile project(':multisnaprecyclerview')
-    compile('com.github.bkhezry:ExtraMapUtils:v1.2.0') {
+    implementation 'com.android.support:multidex:1.0.0'
+    // compile fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation project(':circleimageview')
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation project(':datetimepicker-library')
+    implementation 'com.github.bumptech.glide:glide:4.0.0'
+    implementation 'com.github.bumptech.glide:compiler:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    implementation project(':multisnaprecyclerview')
+    implementation 'com.github.smart-fun:XmlToJson:1.1.1'
+    implementation project(path: ':library-gmail')
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+    implementation project(':library-draw')
+    implementation project(':rosetta')
+    implementation 'com.github.jrvansuita:PickImage:+'
+    implementation project(':qrmodule')
+    implementation project(':library-tableformat')
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    implementation project(':android-reactive-location')
+    implementation project(':library-utills')
+    implementation 'io.reactivex:rxandroid:0.25.0'
+    implementation('com.google.android.gms:play-services-maps:11.0.4') {
         exclude group: 'com.android.support'
     }
-    compile 'com.github.smart-fun:XmlToJson:1.1.1'
-    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
-    compile project(path: ':library-gmail')
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
-    //compile project(':library')
-    compile project(':rosetta')
-    compile 'com.github.jrvansuita:PickImage:+'
-    compile 'com.facebook.android:facebook-android-sdk:4.24.0'
-    compile project(':qrmodule')
-    compile project(':library-tableformat')
-    compile('com.schibstedspain.android:android-reactive-location:0.10.1') {
-        exclude group: 'com.google.android.gms'
+    implementation('com.google.android.gms:play-services-location:11.0.4') {
+        exclude group: 'com.android.support'
     }
-    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
-    compile 'com.google.maps.android:android-maps-utils:0.5+'
-    def playServicesVersion = '10.2.0'
-    compile "com.google.android.gms:play-services-location:$playServicesVersion"
+    implementation 'com.github.florent37:expansionpanel:1.1.0'
+
+    implementation project(':photoview')
+    implementation project(':anychart')
+    implementation project(':exoplayerview')
+    implementation files('libs/httpclient-4.3.6.jar')
+    implementation files('libs/httpcore-4.3.3.jar')
+    implementation files('libs/httpmime-4.3.6.jar')
+    implementation 'com.github.dimorinny:floating-text-button:0.0.2'
+
+    implementation 'com.itextpdf:itext-pdfa:5.5.10'
+    implementation 'com.itextpdf:itextg:5.5.9'
 }

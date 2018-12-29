@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <nec.cst.pra.CustomFontEditText
+                    android:id="@+id/govName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="Name(Family Members)"
+                    android:inputType="textCapWords"
+                    android:textColorHint="#c6c6c6"
+                    app:category="@string/selectable"
+                    app:choices="1 PM Jan Dhan Yojana,2 PM Ujjwala Yojana,3 PM Awas Yojana,4 Sukanya Samridhi Yojana,5 Mudra Yojana,6 PM Jivan Jyoti Bima Yojana,7 PM Suraksha Bima Yojana,8 Atal pension Yojana,9 Fasal Bima Yojana,10 Kaushal Vikas Yojana,11 Krishi Sinchai Yojana,12 Jan Aushadi Yojana,13 Swachh Bharat Mission Toilet,14 Soil Health Card,15 Ladli Lakshmi Yojana,16 Janani Suraksha Yojana,17 Kisan Credit Card"
+                    app:tittle="Name(Family Members)"
+                    android:textSize="15dp" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/govpersonBenfit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="Persons Benefitted(in Numbers)"
+                    android:inputType="phone"
+                    android:textColorHint="#c6c6c6"
+                    android:textSize="15dp" />
+
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:padding="12dp"
+                android:text="SUBMIT"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

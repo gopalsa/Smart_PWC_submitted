@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="info.androidhive.recyclerview">
+    package="nec.cst.pra">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -26,8 +26,19 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+    <meta-data
+        android:name="nec.survey.gaja.app.MyAppGlideModule"
+        android:value="GlideModule" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
     <application
-        android:name=".app.AppController"
+        android:name="nec.cst.pra.app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -40,7 +51,7 @@
 
 
         <activity
-            android:name=".SplashScreen"
+            android:name="nec.cst.pra.SplashScreen"
             android:label="@string/app_name"
             android:theme="@style/AppThemee">
             <intent-filter>
@@ -50,50 +61,76 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FingerprintActivity"
-            android:label="@string/app_name"/>
+            android:name="nec.cst.pra.village.VillageIntroActivity"
+            android:label="@string/app_name" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"/>
+            android:name="nec.cst.pra.survey.MainActivity"
+            android:label="Village Survey" />
+
+        <activity android:name="nec.cst.pra.village.VillageMeetingActivity" />
         <activity
-            android:name=".AttendancePage"
+            android:name="nec.cst.pra.FingerprintActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="nec.cst.pra.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="nec.cst.pra.AttendancePage"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".VRPRegistration"
-            android:windowSoftInputMode="adjustResize"/>
+            android:name="nec.cst.pra.VRPRegistration"
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ProfileActivity"
-            android:windowSoftInputMode="adjustResize"/>
+            android:name="nec.cst.pra.ProfileActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ToolReport"
+            android:name="nec.cst.pra.ToolReport"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".FinalReport"
+            android:name="nec.cst.pra.FinalReport"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".HistoricalTimelinePhoto"
+            android:name="nec.cst.pra.HistoricalTimelinePhoto"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".CustomMarkerClusteringDemoActivity"
+            android:name="nec.cst.pra.CustomMarkerClusteringDemoActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".AdditionalInformation"
+            android:name="nec.cst.pra.household.CustClusterHouseHoldActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".TeamMember"
+            android:name="nec.cst.pra.AdditionalInformation"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Observation"
+            android:name="nec.cst.pra.web.MainActivityWeb"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".MainActivityVideo"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/Base.Theme.AppCompat.Dialog"/>
-        <activity android:name=".table.ui.SampleActivity"
-            android:theme="@style/AppThemeNew"/>
+            android:name="nec.cst.pra.TeamMember"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".MainActivityPra"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".MapsFragActivity" />
+            android:name="nec.cst.pra.Observation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="nec.cst.pra.MainActivityVideo"
+            android:theme="@style/Base.Theme.AppCompat.Dialog"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="nec.cst.pra.table.ui.SampleActivity"
+            android:theme="@style/AppThemeNew" />
+        <activity android:name="nec.cst.pra.MapsFragActivity" />
         <activity android:name="katomaran.evao.lib.qrmodule.activity.QrScannerActivity" />
+
+        <provider
+            android:name="nec.cst.pra.app.GenericFileProvider"
+            android:authorities="${applicationId}.nec.cst.pra.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -111,7 +148,7 @@
             android:value="facebook_app_id" />
 
         <!-- SMS Receiver -->
-        <receiver android:name=".receiver.SmsReceiver">
+        <receiver android:name="nec.cst.pra.receiver.SmsReceiver">
             <intent-filter android:priority="99999">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
@@ -120,8 +157,16 @@
 
         <!-- Intent service -->
         <service
-            android:name=".service.HttpService"
+            android:name="nec.cst.pra.service.HttpService"
             android:exported="false" />
+
+        <activity android:name="nec.cst.pra.UploadActivity" />
+        <activity android:name="nec.cst.pra.village.ActivityMediaOnline" />
+        <activity android:name="nec.cst.pra.household.MainActivityAllSurvey"></activity>
+        <activity android:name="nec.cst.pra.household.MainActivityHouseHold"></activity>
+        <activity android:name="nec.cst.pra.action.MainActivityAllSurveyAction"></activity>
+        <activity android:name="nec.cst.pra.action.MainActivityAction"></activity>
+        <activity android:name="nec.cst.pra.survey.PieChartActivity"></activity>
     </application>
 
 </manifest>
