@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="nec.cst.pra">
+    package="smart.cst.pwc">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -30,7 +30,7 @@
         android:name="android.support.VERSION"
         android:value="25.3.1" />
     <meta-data
-        android:name="nec.survey.gaja.app.MyAppGlideModule"
+        android:name="smart.survey.gaja.app.MyAppGlideModule"
         android:value="GlideModule" />
 
     <uses-feature
@@ -38,9 +38,9 @@
         android:required="true" />
 
     <application
-        android:name="nec.cst.pra.app.AppController"
+        android:name="smart.cst.pwc.app.AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/pwcimgs"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -51,7 +51,7 @@
 
 
         <activity
-            android:name="nec.cst.pra.SplashScreen"
+            android:name="smart.cst.pwc.SplashScreen"
             android:label="@string/app_name"
             android:theme="@style/AppThemee">
             <intent-filter>
@@ -61,70 +61,70 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="nec.cst.pra.village.VillageIntroActivity"
+            android:name="smart.cst.pwc.village.VillageIntroActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="nec.cst.pra.survey.MainActivity"
+            android:name="smart.cst.pwc.survey.MainActivity"
             android:label="Village Survey" />
 
-        <activity android:name="nec.cst.pra.village.VillageMeetingActivity" />
+        <activity android:name="smart.cst.pwc.village.VillageMeetingActivity" />
         <activity
-            android:name="nec.cst.pra.FingerprintActivity"
+            android:name="smart.cst.pwc.FingerprintActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="nec.cst.pra.MainActivity"
+            android:name="smart.cst.pwc.MainActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="nec.cst.pra.AttendancePage"
+            android:name="smart.cst.pwc.AttendancePage"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.VRPRegistration"
+            android:name="smart.cst.pwc.VRPRegistration"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="nec.cst.pra.ProfileActivity"
+            android:name="smart.cst.pwc.ProfileActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="nec.cst.pra.ToolReport"
+            android:name="smart.cst.pwc.ToolReport"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.FinalReport"
+            android:name="smart.cst.pwc.FinalReport"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.HistoricalTimelinePhoto"
+            android:name="smart.cst.pwc.HistoricalTimelinePhoto"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.CustomMarkerClusteringDemoActivity"
+            android:name="smart.cst.pwc.CustomMarkerClusteringDemoActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.household.CustClusterHouseHoldActivity"
+            android:name="smart.cst.pwc.household.CustClusterHouseHoldActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.AdditionalInformation"
+            android:name="smart.cst.pwc.AdditionalInformation"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.web.MainActivityWeb"
+            android:name="smart.cst.pwc.web.MainActivityWeb"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.TeamMember"
+            android:name="smart.cst.pwc.TeamMember"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".MainActivityPra"
+        <activity android:name="smart.cst.pwc.MainActivityPra"
             android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name="nec.cst.pra.Observation"
+            android:name="smart.cst.pwc.Observation"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.MainActivityVideo"
+            android:name="smart.cst.pwc.MainActivityVideo"
             android:theme="@style/Base.Theme.AppCompat.Dialog"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="nec.cst.pra.table.ui.SampleActivity"
+            android:name="smart.cst.pwc.table.ui.SampleActivity"
             android:theme="@style/AppThemeNew" />
-        <activity android:name="nec.cst.pra.MapsFragActivity" />
+        <activity android:name="smart.cst.pwc.MapsFragActivity" />
         <activity android:name="katomaran.evao.lib.qrmodule.activity.QrScannerActivity" />
 
         <provider
-            android:name="nec.cst.pra.app.GenericFileProvider"
-            android:authorities="${applicationId}.nec.cst.pra.provider"
+            android:name="smart.cst.pwc.app.GenericFileProvider"
+            android:authorities="${applicationId}.smart.cst.pwc.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -148,7 +148,7 @@
             android:value="facebook_app_id" />
 
         <!-- SMS Receiver -->
-        <receiver android:name="nec.cst.pra.receiver.SmsReceiver">
+        <receiver android:name="smart.cst.pwc.receiver.SmsReceiver">
             <intent-filter android:priority="99999">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
@@ -157,16 +157,19 @@
 
         <!-- Intent service -->
         <service
-            android:name="nec.cst.pra.service.HttpService"
+            android:name="smart.cst.pwc.service.HttpService"
             android:exported="false" />
 
-        <activity android:name="nec.cst.pra.UploadActivity" />
-        <activity android:name="nec.cst.pra.village.ActivityMediaOnline" />
-        <activity android:name="nec.cst.pra.household.MainActivityAllSurvey"></activity>
-        <activity android:name="nec.cst.pra.household.MainActivityHouseHold"></activity>
-        <activity android:name="nec.cst.pra.action.MainActivityAllSurveyAction"></activity>
-        <activity android:name="nec.cst.pra.action.MainActivityAction"></activity>
-        <activity android:name="nec.cst.pra.survey.PieChartActivity"></activity>
+        <activity android:name="smart.cst.pwc.UploadActivity" />
+        <activity android:name="smart.cst.pwc.village.ActivityMediaOnline" />
+        <activity android:name="smart.cst.pwc.household.MainActivityAllSurvey"></activity>
+        <activity android:name="smart.cst.pwc.household.MainActivityHouseHold"></activity>
+        <activity android:name="smart.cst.pwc.action.MainActivityAllSurveyAction"></activity>
+        <activity android:name="smart.cst.pwc.action.MainActivityAction"></activity>
+        <activity android:name="smart.cst.pwc.survey.PieChartActivity"></activity>
+        <activity android:name="smart.cst.pwc.fgd.MainActivityFGD" />
+        <activity android:name="smart.cst.pwc.fgd.MainActivityAllFGDSurvey"/>
+
     </application>
 
 </manifest>

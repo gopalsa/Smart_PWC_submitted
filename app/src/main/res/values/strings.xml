@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Smart GEO PRA UBA 2.0</string>
+    <string name="app_name">Smart PWC</string>
     <string name="action_settings">Settings</string>
     <string name="Submit">Submit</string>
 
@@ -245,5 +245,11 @@ Step 2: Observe and Record all information during Informal Exposure Walk.\n\n\n\
     <string name="averageMilk">11.9) Average Daily Production of Milk(Litres)</string>
     <string name="animalWaste">11.10) Animal Waste/Cow Dung (in Kgs.)</string>
 
+
+
+    <string name="select">Select</string>
+    <string name="enter">Enter</string>
+    <string name="multiSselectable">multi selectable</string>
+    <string name="date">date</string>
 
 </resources>

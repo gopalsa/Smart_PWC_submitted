@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <smart.cst.pwc.CustomFontEditText
+            android:id="@+id/factor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:hint="Factor"
+            android:textColorHint="#ffc6c6c6"
+            android:backgroundTint="@color/gray"
+            app:category="@string/selectable"
+            app:tittle="Factor"
+            app:choices="Seed / Planting material,Fertilizer,Pesticides,Farm labour for sowing,Farm labour for intercultural operations,Farm labour for harvesting,Electricity for irrigation,Agriculture credit / finance,Others "/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/alwaysAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:hint=" Always Available"
+            android:inputType="text"
+            android:textColorHint="#ffc6c6c6"
+            android:backgroundTint="@color/gray"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/mostlyAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffc6c6c6"
+            android:backgroundTint="@color/gray"
+            android:inputType="text"
+            android:textSize="15dp"
+            android:hint=" Mostly Available" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/sometimesAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint="#ffc6c6c6"
+            android:backgroundTint="@color/gray"
+            android:inputType="text"
+            android:hint=" Sometimes available sometimes unavailable" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/mostlyUnAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint="#ffc6c6c6"
+            android:backgroundTint="@color/gray"
+            android:inputType="text"
+            android:hint="Mostly unavailable" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/alwaysUnAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint="#ffc6c6c6"
+            android:backgroundTint="@color/gray"
+            android:inputType="text"
+            android:hint=" Always unavailable " />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:textSize="15dp"
+        android:padding="12dp"
+        android:text="SUBMIT"
+        android:textColor="#fff"
+        android:textStyle="bold"/>
+
+</LinearLayout>

@@ -28,7 +28,7 @@
                 android:layout_marginTop="10dp"
                 android:src="@drawable/profile" />
 
-            <nec.cst.pra.CustomFontTextView
+            <smart.cst.pwc.CustomFontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -61,7 +61,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.25">
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:id="@+id/aadharnumer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.25">
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:id="@+id/projectname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.3">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/geotag"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.25">
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:id="@+id/voname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/panchayat"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -283,7 +283,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/address"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -328,7 +328,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/vopresident"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -373,7 +373,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/farmercontact2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -419,7 +419,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/farmercontact"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -465,7 +465,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagehouseholds"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -511,7 +511,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagearea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -555,7 +555,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/forestarea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -599,7 +599,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/cultivatedarea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -643,7 +643,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/otherarea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -687,7 +687,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/totalpopulation"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -731,7 +731,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagepopulationmale"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -776,7 +776,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagepopulationfemale"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -820,7 +820,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagepopulationothers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -864,7 +864,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagepopulationchildmale"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -908,7 +908,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagepopulationchildfemale"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -952,7 +952,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villagepopulationchildothers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -996,7 +996,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/noofshg"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1040,7 +1040,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/totalvomembers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1084,7 +1084,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/totalfpomembers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1129,7 +1129,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/totalstmembers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1173,7 +1173,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/totalscmembers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1217,7 +1217,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/totalobcmembers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1261,7 +1261,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/totalgeneralmembers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1305,7 +1305,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/irrication"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1398,7 +1398,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/vobankaccountnumber"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1442,7 +1442,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/vobankifscnumber"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1485,7 +1485,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.25">
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1524,7 +1524,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.25">
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:id="@+id/confirmpassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1564,7 +1564,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.25">
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:id="@+id/otp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1605,7 +1605,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.25">
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -1626,7 +1626,7 @@
     </android.support.v4.widget.NestedScrollView>
 
 
-    <nec.cst.pra.CustomFontTextView
+    <smart.cst.pwc.CustomFontTextView
         android:id="@+id/r_submittxt"
         android:layout_width="match_parent"
         android:layout_height="50dp"

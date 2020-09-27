@@ -635,7 +635,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="5dp">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/villageConnectedPaccaRoad"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -714,7 +714,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="5dp">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/presentStatus"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -774,7 +774,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="5dp">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/modeOfTransport"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -796,7 +796,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="5dp">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/frequencyOfAvailable"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

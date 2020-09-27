@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <nec.cst.pra.CustomFontEditText
+        <smart.cst.pwc.CustomFontEditText
             android:id="@+id/baseVillageComplete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

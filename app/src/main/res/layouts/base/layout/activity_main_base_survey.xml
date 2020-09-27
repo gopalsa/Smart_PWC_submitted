@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smart.cst.pwc.MainActivity">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="1. Name"
+                    android:inputType="text"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="2. Phone No"
+                    android:inputType="phone"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/emailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:hint="3. Email-id"
+                    android:inputType="text"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/agree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:hint="4. Do you agree to participate in this survey? "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Do you agree to participate in this survey?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/agreeOwnHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:hint="5. Does anyone in the house own agriculture land? "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Does anyone in the house own agriculture land?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/ownLand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:hint="6. Who owns the agriculture land?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Male Member,Female Member,Both,Don’t Know"
+                    app:tittle=" Who owns the agriculture land?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/landCutivated"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="7. Land cultivated by you in the previous year (in Acres)"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/addFarmPowerImgmg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/landCutivaedList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TotalLandCultivate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="8. Of the total land cultivated by you, how much was under irrigation?"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/addFarmPowerImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/totalLandCultivatedList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/organicFarming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="9. Do you follow organic farming practices?"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="  Do you follow organic farming practices?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="If no go to next Question"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/betterPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="10. If yes to Q 10, do you get a better price for organically farmed produce?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="  If yes to Q 10, do you get a better price for organically farmed produce?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="If no go to next Question"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/percentageOfAdditional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="11.If yes to Q 10, what percentage of additional price do you get for organic produce compared to normal produce?"
+                    android:inputType="text"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Access to Farm inputs"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/farmInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text=" 12. Are farm inputs available as per your quality and quantity requirement? "
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/addFarmPoweImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/farmInputList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/mostPreferred"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="13. Where do you usually buy  your seeds, fertilizers and pesticides from? Please tick most preferred option."
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Input  shop at the block headquarter,Input  Shop at the district level,PACS,Village/ Panchayat,Research station/university,others "
+                    app:tittle=" Where do you usually buy  your seeds, fertilizers and pesticides from?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/sourceOfPurchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="14. How far is the source of purchase of seeds, fertilizers and pesticides from your village?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Access to Finance"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/borrowMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="15. Do you borrow money for agriculture activities?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle=" Do you borrow money for agriculture activities?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="If no go to next Question"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/mentionMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="16. Typically, how much of money do you borrow for crop cultivation on an average per year? Mention in Rupees"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/WhenDoYouBorrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="17. When do you borrow money for agriculture activities?  "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Just before I start cultivating the crop,In instalments when I need to buy inputs for the crop,Cant say. As and when required,others"
+                    app:tittle=" When do you borrow money for agriculture activities?" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/repayTheMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="18. When do you repay the money that you have borrowed? "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/multiSselectable"
+                    app:choices="  After last harvest of crop, In instalments during the harvesting season,As and when I have the fund from other sources of income,others "
+                    app:tittle=" When do you repay the money that you have borrowed?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/howLong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="19. Typically, how long do you take to repay your loan?  Mention in Rupees"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/whomMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="20. Whom do you borrow money from? "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Bank,Village money lender,Fertilizer / pesticide / seed supplier,Aggregator / trader who purchases my produce,Kisan Credit Card,Self-help group / Chit funds,Micro finance company,others"
+                    app:tittle="Whom do you borrow money from?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/lenders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="21. What is the rate of interest paid to the lenders? "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/multiSselectable"
+                    app:choices="5,10,15,20,others"
+                    app:tittle="  What is the rate of interest paid to the lenders?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/percentageOfDebit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="22. What percentage of your debt requirement you borrow from these lenders? "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="5,10,15,20,others,others"
+                    app:tittle="  What percentage of your debt requirement you borrow from these lenders? " />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/bankLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="23. Have you approached a bank to access a loan?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="  Have you approached a bank to access a loan?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/issues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="24. What percentage of your debt requirement you borrow from these lenders? "
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/multiSselectable"
+                    app:choices="Do not have access to Banks,Requirement of a security ,Banks take too long to process loan,I do not have land to mortgage,Process is too cumbersome,Have unpaid outstanding with Bank,others  "
+                    app:tittle="  What percentage of your debt requirement you borrow from these lenders? " />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Access to Knowledge Technology and Information"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/bstfarmpractice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="31. What is your source of information on best farmer practices to be followed? Please rank top 5. (1 is the best)"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Farmers in my village / Farmer friend/Relatives,Input Dealer (fertilizer,seed,pesticide etc.),Trader / Aggregator,Krishi Vigyan Kendra,e-Kisan Bhawan,Government officials,Kisan Call Centre,SMS on mobile,News paper,TV,Radio,NGO’s,Private Companies,others"
+                    app:tittle="What is your source of information on best farmer practices to be followed? Please rank top 5. (1 is the best)" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/trained"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="32. How many times in the past three years have you been trained / advised on farm practices by KVK/Agriculture department/ATMA/Anyone else? (Please tick appropriate statement)"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Not trained,Trained once in three years,Trained twice in three years,Trained thrice in three years,Trained more three times in a year"
+                    app:tittle="How many times in the past three years have you been trained / advised on farm practices by KVK/Agriculture department/ATMA/Anyone else? (Please tick appropriate statement)" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/providetraining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="33. Who provided the training? Please tick relevant answer"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="ATMA / Government extension officer,Produce retailer / Aggregator,Pesticide / Fertilizer / Seed company,NGO,KVK scientist,Processing company,others"
+                    app:tittle="Who provided the training? Please tick relevant answer" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/soiltesting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="34. Are you aware about soil testing facilities in your area?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Are you aware about soil testing facilities in your area?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/soiltested"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="35. If yes, have you got your soil tested?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="If yes, have you got your soil tested?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/frequencysoiltested"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="36. At what frequency do you get your soil tested? Please tick most relevant answer"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Once in a season,Once a year,Once in a 3 years,Once in 5 years,Once in more than 5 years"
+                    app:tittle="At what frequency do you get your soil tested? Please tick most relevant answer" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/weatherinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="37. Do  you  receive information on weather?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Do  you  receive information on weather?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/sourceinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="38. If yes, what are the sources of information?(Multiple responses possible. Please tick all relevant)"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/multiSselectable"
+                    app:choices="TV,Radio,Mobile SMS,Friends/Neighbors,News Papers,other"
+                    app:tittle="If yes, what are the sources of information?(Multiple responses possible. Please tick all relevant)" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/commoditymarketprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="39. Do you receive information on commodity market prices?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Do you receive information on commodity market prices?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/getinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="40. If yes, at what frequency do you get the information?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Once every week,Once every month,Once every quarter,Once in six months,Once in a year,More than a year"
+                    app:tittle="If yes, at what frequency do you get the information?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/commodityprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="41. What is the source of information on the commodity prices?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="TV,Radio,Mobile SMS,Traders,Other Farmers,others"
+                    app:tittle="What is the source of information on the commodity prices?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/ekisanaware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="42. Are you aware of the e-kisaan Bhawan in your area?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Are you aware of the e-kisaan Bhawan in your area?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/ekisanservice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="43. Have you used the services of e-kisaan Bhawan?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Have you used the services of e-kisaan Bhawan?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Access to Post harvest handling, Storage and transport"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/warehouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="44. Add warehouse / cold stores / grading and pack houses"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/warehouseImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/warehouseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/frequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="45. Add frequency of using warehouses/cold storage facilities"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/frequencyImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/frequencyList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="46. Add storage and sales"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/storageImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/storageList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/postharvest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="47. Do you value add to your produce post harvest – by cleaning, sorting and grading?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Do you value add to your produce post harvest – by cleaning, sorting and grading?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pharvestval"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="48. Add post-harvest value"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/pharvestvalImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/pharvestvalList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/addactivities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="49.Do you get a better price due to post harvest value addition activities – such as sorting, grading and cleaning?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Do you get a better price due to post harvest value addition activities – such as sorting, grading and cleaning?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sellmajority"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="50. Sell majority produce last year"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/sellmajorityImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/sellmajorityList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pricepercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="51. Percentage increase in price"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/pricepercentImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_action_addround"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/pricepercentList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/avgcost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="52. What is your average cost of transportation / quintal of produce (Rs/quintal)"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Cereals / Pulses / Oilseeds,Fruits,Onions,Potato,Other vegetables"
+                    app:tittle="What is your average cost of transportation / quintal of produce (Rs/quintal)" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/produceweight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:hint="53. How is your produce weighed before sale?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Weighment is approximate,Weighing is manual,Weighing is done using electronic equipment,others"
+                    app:tittle="How is your produce weighed before sale?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="House Hold Information"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="74. Household income per annum"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Total household income per annum,Of which income from crop-farming activity ,Of which income from other agriculture  activity,Of which income from agriculture labour activity,Of which income from non-agriculture labour activity,Of which income from non-agriculture activity  "
+                    app:tittle="Household income per annum" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/household"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="77. The following do you have in the household?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/multiSselectable"
+                    app:choices="Electricity,Mattress,Pressure Cooker,Chair,Cot/Bed,Table,Electric Fan,Radio/Transistor,B/W Television,Colour Television,Sewing Machine,Mobile Telephone,Land line Telephone,Internet,Computer,Refrigerator,Air Conditioner/Cooler,Washing Machine,Watch/Clock,Bicycle,Motor Cycle,Animal drawn cart,Car,Water pump,Thresher,Tractor"
+                    app:tittle="The following do you have in the household?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/kitchen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="78. Do you have Seperate room as the Kitchen?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Yes,No"
+                    app:tittle="Do you have Seperate room as the Kitchen?" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/floor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="79. Main material of the floor"
+                        android:textAllCaps="false"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/addfloorImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_action_addround"
+                        android:tint="@color/colorPrimary" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rfloor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/roof"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="80. Main material of the Roof"
+                        android:textAllCaps="false"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/addFarmPowerImgg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_action_addround"
+                        android:tint="@color/colorPrimary" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rroof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/exterior"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="81. Main material of the Exterior"
+                        android:textAllCaps="false"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/addFarmPowerImggg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_action_addround"
+                        android:tint="@color/colorPrimary" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rexterior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/ownhouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="83. Who owns the house"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="Male,Female,Both,Dont know"
+                    app:tittle="Who owns the house" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/rationcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="84. Which ration card do you hold?"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="APL,BPL,Do not have a card" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <smart.cst.pwc.CustomFontEditText
+                    android:id="@+id/research"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray"
+                    android:hint="This Survey Research purpose only . would you like to be part of such survey"
+                    android:textColorHint="#ffc6c6c6"
+                    android:textSize="15dp"
+                    app:category="@string/selectable"
+                    app:choices="yes,no" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:padding="12dp"
+                android:text="SUBMIT"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

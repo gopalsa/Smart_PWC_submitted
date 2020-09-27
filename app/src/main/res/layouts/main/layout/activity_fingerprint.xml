@@ -26,7 +26,7 @@
             android:paddingTop="2dp"
             android:src="@mipmap/ic_fingerprint" />
 
-        <nec.cst.pra.CustomFontTextView
+        <smart.cst.pwc.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -68,7 +68,7 @@
             android:layout_gravity="center"
             android:background="#e4e3e3" />
 
-        <nec.cst.pra.CustomFontTextView
+        <smart.cst.pwc.CustomFontTextView
             android:layout_width="match_parent"
             android:text="Or"
             android:layout_weight="1"
@@ -180,7 +180,7 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <nec.cst.pra.CustomFontTextView
+                <smart.cst.pwc.CustomFontTextView
                     android:id="@+id/login"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -200,7 +200,7 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <nec.cst.pra.CustomFontTextView
+                <smart.cst.pwc.CustomFontTextView
                     android:id="@+id/addfarmer"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -211,7 +211,7 @@
                     android:textSize="18dp"
                     app:fontName="maven" />
 
-                <nec.cst.pra.CustomFontTextView
+                <smart.cst.pwc.CustomFontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

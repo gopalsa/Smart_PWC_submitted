@@ -26,7 +26,7 @@
                 android:gravity="left|center"
                 android:orientation="horizontal">
 
-                <nec.cst.pra.CustomFontTextView
+                <smart.cst.pwc.CustomFontTextView
                     android:id="@+id/itemtittle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                         app:civ_border_color="#c0c0c0"
                         app:civ_border_width="1dp" />
 
-                    <nec.cst.pra.CustomFontEditText
+                    <smart.cst.pwc.CustomFontEditText
                         android:id="@+id/imagetxt"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -118,7 +118,7 @@
                             android:layout_gravity="center"
                             android:layout_weight="0.3">
 
-                            <nec.cst.pra.CustomFontEditText
+                            <smart.cst.pwc.CustomFontEditText
                                 android:id="@+id/geotag"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25">
 
-                        <nec.cst.pra.CustomFontEditText
+                        <smart.cst.pwc.CustomFontEditText
                             android:id="@+id/description"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <nec.cst.pra.CustomFontTextView
+                    <smart.cst.pwc.CustomFontTextView
                         android:id="@+id/r_submittxt"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

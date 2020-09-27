@@ -278,7 +278,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@android:color/transparent"
                 android:gravity="center"
-                android:hint="Obserrvation"
+                android:hint="Observation"
                 android:textColorHint="#000"
                 android:textSize="17dp" />
 

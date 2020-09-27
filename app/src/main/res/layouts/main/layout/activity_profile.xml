@@ -78,7 +78,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/totalpopulation"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -118,7 +118,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/area"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/customFontTextView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/households"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -209,7 +209,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/populationmale"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -219,7 +219,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -245,7 +245,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/populationfemale"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -283,7 +283,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/populationothers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -293,7 +293,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -335,7 +335,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/childrenmale"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -345,7 +345,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -371,7 +371,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/childrenfemale"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -381,7 +381,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -409,7 +409,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/childrenothers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -419,7 +419,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -462,7 +462,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/stmembers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -472,7 +472,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/customFontTextView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -500,7 +500,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/scmembers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -510,7 +510,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -539,7 +539,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/obcmembers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -549,7 +549,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -592,7 +592,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/noofshg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -602,7 +602,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -629,7 +629,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/vomembers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -639,7 +639,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -668,7 +668,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/fpomembers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -678,7 +678,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -721,7 +721,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/forestarea"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -731,7 +731,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -758,7 +758,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/cultivatedarea"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -768,7 +768,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -797,7 +797,7 @@
                             android:orientation="vertical">
 
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/otherarea"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -807,7 +807,7 @@
                                 android:textSize="15dp"
                                 app:fontName="maven" />
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -854,7 +854,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/bankdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -920,7 +920,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/cropdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -986,7 +986,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/animaldetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1052,7 +1052,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/farmmachinedetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1118,7 +1118,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/labourdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1184,7 +1184,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/soilresourcesdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1250,7 +1250,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/waterresourcesdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1316,7 +1316,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/toiletsdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1382,7 +1382,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/electricitydetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1448,7 +1448,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/financialinstitutionsdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1514,7 +1514,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/schoolsdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1580,7 +1580,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/hospitalsdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"
@@ -1646,7 +1646,7 @@
                             android:gravity="left|center"
                             android:orientation="horizontal">
 
-                            <nec.cst.pra.CustomFontTextView
+                            <smart.cst.pwc.CustomFontTextView
                                 android:id="@+id/shopsdetail"
                                 style="@style/carddemo_suggested_text_bold"
                                 android:layout_width="match_parent"

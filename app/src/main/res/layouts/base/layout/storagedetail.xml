@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <smart.cst.pwc.CustomFontEditText
+            android:id="@+id/sproduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Produce"
+            app:tittle="Produce"
+            app:category="@string/selectable"
+            android:textColorHint="#ffc6c6c6"
+            android:textSize="15dp"
+            android:backgroundTint="@color/gray"
+            app:choices="Cereals and food grain,Fruits,Vegetables"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <smart.cst.pwc.CustomFontEditText
+            android:id="@+id/sproduceoptn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option"
+            android:textSize="15dp"
+            app:tittle="Option"
+            app:category="@string/selectable"
+            android:textColorHint="#ffc6c6c6"
+            android:backgroundTint="@color/gray"
+            app:choices="No,others"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:textSize="15dp"
+        android:padding="12dp"
+        android:text="SUBMIT"
+        android:textColor="#fff"
+        android:textStyle="bold"/>
+
+</LinearLayout>

@@ -2,75 +2,102 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/splashScreen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/smartpratoolkit"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pwcfgd"
     android:orientation="vertical">
 
-
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/bu_logo" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right"
+                android:src="@drawable/logo1" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/pwcimgs" />
+
+
+        </RelativeLayout>
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/center"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
-
-    <TextView
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/relativeLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:fontFeatureSettings="smcp"
-        android:text="Smart Geo PRA for UBA 2.0"
-        android:textColor="#fff"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/logoCst"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/cst" />
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/logoCst"
-            android:layout_toRightOf="@+id/logoCst"
-            android:gravity="center"
-            android:text="Innovated by Climate Smart Tech DIPP Recognized Startup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:fontFeatureSettings="smcp"
+            android:text="Smart PWC FGD"
             android:textColor="#fff"
-            android:textSize="12sp" />
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logoCst"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/cst" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/logoCst"
+                android:layout_toRightOf="@+id/logoCst"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="\u00A9 Climate Smart Technologies Private Limited"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
+

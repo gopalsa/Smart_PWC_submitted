@@ -20,7 +20,7 @@
             android:src="@drawable/ic_touch_app_black_24dp"
             android:tint="@color/colorPrimary" />
 
-        <nec.cst.pra.CustomFontTextView
+        <smart.cst.pwc.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -40,7 +40,7 @@
         android:visibility="gone" />
 
 
-    <nec.cst.pra.CustomFontTextView
+    <smart.cst.pwc.CustomFontTextView
         android:id="@+id/r_submittxt"
         android:layout_width="match_parent"
         android:layout_height="50dp"

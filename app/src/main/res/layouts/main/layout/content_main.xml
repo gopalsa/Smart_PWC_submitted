@@ -25,7 +25,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:gravity="center_vertical"
-                android:text="UBA 2.0 Dashboard"
+                android:text="PWC Dashboard"
                 android:textColor="#000"
                 android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:letterSpacing="0.1"
-                            android:text="UBA Team"
+                            android:text="FPC Team"
                             android:textColor="#000"
                             android:textSize="12dp" />
 
@@ -96,7 +96,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:letterSpacing="0.1"
-                            android:text="Gram Shaba"
+                            android:text="FGD meetings"
                             android:textColor="#000"
                             android:textSize="12dp" />
 
@@ -135,7 +135,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:letterSpacing="0.1"
-                            android:text="Village Survey"
+                            android:text="Baseline Survey"
                             android:textColor="#000"
                             android:textSize="12dp" />
 
@@ -171,7 +171,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:letterSpacing="0.1"
-                            android:text="Geo PRA"
+                            android:text="Geo Mapping"
                             android:textColor="#000"
                             android:textSize="12dp" />
 
@@ -196,6 +196,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/card1"
                 android:clickable="true"
+                android:visibility="gone"
                 android:elevation="5dp"
                 android:foreground="?android:attr/selectableItemBackground">
 
